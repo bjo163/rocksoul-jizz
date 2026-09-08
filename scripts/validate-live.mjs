@@ -42,6 +42,10 @@ for(const name of files){
   const bundle=readJson(path.join(liveDir,name));
   invariant(bundle.domain==="PERSPECTIVE",`${name}: domain must be PERSPECTIVE`);
   invariant(bundle.corpus_kind==="LIVE_RESEARCH",`${name}: corpus_kind must be LIVE_RESEARCH`);
+  invariant(bundle.research_issue && typeof bundle.research_issue==="object",`${name}: LIVE_RESEARCH requires parent research_issue`);
+  invariant(bundle.research_issue.repository==="bjo163/rocksoul-jizz",`${name}: research_issue repository mismatch`);
+  invariant(Number.isInteger(bundle.research_issue.number) && bundle.research_issue.number>0,`${name}: research_issue number invalid`);
+  invariant(/^https:\/\/github\.com\/bjo163\/rocksoul-jizz\/issues\/\d+$/.test(bundle.research_issue.url),`${name}: research_issue URL invalid`);
   invariant(validators.phenomenon(bundle.phenomenon),`${name}: phenomenon schema failed ${JSON.stringify(validators.phenomenon.errors)}`);
 
   const families=[
