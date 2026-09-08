@@ -614,7 +614,7 @@
         "OBS-JIZZ-BKN-20260611"
       ],
       "research_run_id": "RRUN-JIZZ-AI-WORKFORCE-20260908",
-      "notes": "Human-curated bootstrap research from five publicly accessible 2026 sources. Extracted signals are source-scoped paraphrases, not claims of universal truth.",
+      "notes": "Human-curated bootstrap research from five publicly accessible 2026 sources. Extracted signals are source-scoped paraphrases, not claims of universal truth. Parent research lineage: GitHub issue #3 (bootstrap backfill; future live promotion requires issue-first flow).",
       "created_at": "2026-09-08T11:30:00Z"
     }
   ],
@@ -631,7 +631,7 @@
         "METH-JIZZ-CURATED-FIELD-001"
       ],
       "coverage": 0.64,
-      "notes": "Bootstrap live corpus assembled from New York Fed, Dallas Fed, PwC, ILO and BKN sources; coverage is intentionally incomplete and should expand with more worker, community, investor and employer voices."
+      "notes": "Bootstrap live corpus assembled from New York Fed, Dallas Fed, PwC, ILO and BKN sources; coverage is intentionally incomplete and should expand with more worker, community, investor and employer voices. Parent research lineage: GitHub issue #3."
     }
   ],
   "methodologies": [
@@ -659,5 +659,12 @@
       "description": "Source-scoped curation method for the first live JIZZ observatory corpus. It preserves disagreement and records coverage uncertainty instead of producing a winning perspective.",
       "created_at": "2026-09-08T11:30:00Z"
     }
-  ]
+  ],
+  "research_issue": {
+    "repository": "bjo163/rocksoul-jizz",
+    "number": 3,
+    "url": "https://github.com/bjo163/rocksoul-jizz/issues/3",
+    "state_at_promotion": "open",
+    "lineage": "BOOTSTRAP_BACKFILL"
+  }
 }
