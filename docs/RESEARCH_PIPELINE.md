@@ -58,6 +58,26 @@ rejected
 
 A merged candidate remains in history so the path from discovery to canonical perspective data stays auditable.
 
+## Issue-first canonical gate
+
+Every `LIVE_RESEARCH` phenomenon must have a parent GitHub research issue before live canonical records are promoted.
+
+```text
+DISCOVERY / CURATOR LEAD
+        ↓
+GITHUB RESEARCH ISSUE
+        ↓
+SOURCE INSPECTION
+        ↓
+CANDIDATE / REVIEWABLE EXTRACTION
+        ↓
+LIVE_RESEARCH
+```
+
+This applies to both automated and manually initiated research. CI rejects any `data/live/*.json` bundle that lacks a `research_issue` lineage object.
+
+The first live AI/workforce corpus was created during frontend bootstrap before this rule was enforced; issue #3 records that bootstrap lineage as an explicit backfill. Future live records are not allowed to bypass the issue gate.
+
 ## Canonical extraction
 
 Once a source is actually inspected:
