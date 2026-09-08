@@ -1,5 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
 import {
   candidateId,
   isDuplicateTitle,
@@ -36,4 +38,13 @@ test("steward stages strong non-duplicate leads but rejects duplicate ownership"
   assert.equal(stewardDecision({ baseScore: 90, hasLocator: true, duplicate: false }).action, "stage_candidate");
   assert.equal(stewardDecision({ baseScore: 90, hasLocator: true, duplicate: true }).action, "duplicate");
   assert.equal(isDuplicateTitle("AI workforce reduction", ["AI workforce reduction"]), true);
+});
+
+
+test("generic research issue lifecycle maps deterministic Steward decisions",()=>{
+  const steward=fs.readFileSync(path.join(process.cwd(),"scripts/research-steward.mjs"),"utf8");
+  assert.match(steward,/stage_candidate[^\n]+needs_sources/);
+  assert.match(steward,/hold[^\n]+triaged/);
+  assert.match(steward,/ROCKSOUL-RESEARCH-STATE/);
+  assert.match(steward,/state_reason[^\n]+not_planned/);
 });
