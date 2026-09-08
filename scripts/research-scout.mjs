@@ -121,9 +121,11 @@ async function createIssue(topic, query, lead, fingerprint) {
 const seen = await seenFingerprints();
 const topics = config.topics.filter((topic) => !laneFilter || topic.id === laneFilter);
 const day = Math.floor(Date.now() / 86400000);
+const offset = topics.length ? day % topics.length : 0;
+const orderedTopics = laneFilter ? topics : [...topics.slice(offset), ...topics.slice(0, offset)];
 let created = 0;
 
-for (const topic of topics) {
+for (const topic of orderedTopics) {
   if (created >= maxNew) break;
   const query = topic.queries[(day + topic.id.length) % topic.queries.length];
 
@@ -147,7 +149,7 @@ for (const topic of topics) {
     await createIssue(topic, query, lead, fingerprint);
     seen.add(fingerprint);
     created += 1;
-    if (created >= maxNew) break;
+    break;
   }
 }
 
