@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="JIZZ — ROCKSOUL multi-perspective intelligence observatory." />
+  <title>JIZZ — The World, From Every Angle</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="JIZZ home">
+      <span class="brand-mark">J</span>
+      <span><b>JIZZ</b><small>JUXTAPOSE · INTELLIGENCE · ZIGZAG · ZONE</small></span>
+    </a>
+    <div class="status"><span class="pulse"></span><span id="health">LIVE</span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">MULTI-PERSPECTIVE INTELLIGENCE</p>
+      <h1>HOW IS THE WORLD<br /><em>SEEING IT?</em></h1>
+      <p class="lede">JIZZ owns the view — not the thing. Compare framings, positions, reactions and signals without collapsing disagreement into a verdict.</p>
+      <div class="hero-actions">
+        <label class="select-wrap">
+          <span>Phenomenon</span>
+          <select id="phenomenonSelect" aria-label="Select phenomenon"></select>
+        </label>
+        <div class="mode-chip" id="corpusKind">LIVE RESEARCH</div>
+      </div>
+    </section>
+
+    <section class="phenomenon-panel">
+      <div>
+        <p class="section-kicker">PHENOMENON</p>
+        <h2 id="phenomenonTitle">Loading…</h2>
+        <p id="phenomenonDescription" class="muted"></p>
+      </div>
+      <div class="keyword-row" id="keywords"></div>
+    </section>
+
+    <section class="metrics" id="metrics">
+      <article><span>OBSERVATIONS</span><strong id="metricObservations">—</strong></article>
+      <article><span>PERSPECTIVES</span><strong id="metricPerspectives">—</strong></article>
+      <article><span>ACTORS</span><strong id="metricActors">—</strong></article>
+      <article><span>GEOGRAPHIES</span><strong id="metricGeographies">—</strong></article>
+      <article class="metric-emphasis"><span>DIVERGENCE</span><strong id="metricDivergence">—</strong></article>
+      <article><span>UNCERTAINTY</span><strong id="metricUncertainty">—</strong></article>
+    </section>
+
+    <section class="insight" id="insightPanel">
+      <div class="insight-label">CURRENT INSIGHT</div>
+      <blockquote id="insightText">Loading the perspective field…</blockquote>
+      <div class="insight-meta" id="insightMeta"></div>
+    </section>
+
+    <section class="field-section">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">PERSPECTIVE FIELD</p>
+          <h2>The same phenomenon, different lenses.</h2>
+        </div>
+        <div class="filters">
+          <select id="actorFilter" aria-label="Filter by actor type"><option value="">All actors</option></select>
+          <select id="positionFilter" aria-label="Filter by position"><option value="">All positions</option></select>
+        </div>
+      </div>
+      <div class="perspective-grid" id="perspectiveGrid"></div>
+    </section>
+
+    <section class="split">
+      <div class="panel">
+        <div class="section-head compact">
+          <div><p class="section-kicker">FRAMING MAP</p><h2>What lens dominates?</h2></div>
+        </div>
+        <div id="framingBars" class="bars"></div>
+      </div>
+      <div class="panel">
+        <div class="section-head compact">
+          <div><p class="section-kicker">POSITION MAP</p><h2>How aligned is the field?</h2></div>
+        </div>
+        <div id="positionBars" class="bars"></div>
+      </div>
+    </section>
+
+    <section class="sources-section">
+      <div class="section-head">
+        <div><p class="section-kicker">SOURCE TRAIL</p><h2>Every view stays traceable.</h2></div>
+        <span id="sourceCount" class="count-chip"></span>
+      </div>
+      <div class="source-list" id="sourceList"></div>
+    </section>
+
+    <section class="methodology">
+      <div>
+        <p class="section-kicker">BOUNDARY</p>
+        <h2>No winning perspective.</h2>
+      </div>
+      <p>Observation ≠ fact · Perspective ≠ truth · Framing ≠ story · Reaction ≠ event · Article volume ≠ consensus.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>ROCKSOUL · JIZZ</span>
+    <span>THE WORLD, FROM EVERY ANGLE.</span>
+  </footer>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
