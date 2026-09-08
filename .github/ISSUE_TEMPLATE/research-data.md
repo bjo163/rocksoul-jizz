@@ -1,48 +1,99 @@
 ---
-name: Perspective Research Lead
-about: Add a sourced public-discourse, framing, reaction, or perspective lead
-title: "[RESEARCH] "
+name: PERSPECTIVE Research Lead
+about: Open an issue-first public-discourse, framing, reaction, or perspective lead
+title: "[RESEARCH] PERSPECTIVE · "
 labels: ""
 assignees: ""
 ---
 
-## Phenomenon
+![ROCKSOUL PERSPECTIVE research](https://raw.githubusercontent.com/bjo163/rocksoul-assets/main/moonwitness/cinematic-hero-pack/png/data-observatory.png)
 
-<!-- What subject is being seen or discussed? -->
+## Research Card
 
-## Zone / geography
+| Field | Value |
+|---|---|
+| Domain | **PERSPECTIVE** |
+| Canonical owner | `rocksoul-jizz` |
+| State | `discovered` |
+| Origin | `manual` |
+| Canonical branch | `main` |
 
-<!-- Global, regional, local, digital, cultural, technical, political, economic, scientific, or community context. -->
+## Research Question
 
-## Perspective question
+> **How is the world seeing it?**
 
-<!-- What difference in framing, actor position, reaction, or attention is worth observing? -->
+<!-- Define the phenomenon and the perspective difference worth observing. -->
 
-## Sources
+## Why This Matters
 
-| Source | Type | Link / locator | What perspective/observation it may support |
-|---|---|---|---|
-| | | | |
+<!-- Why is this perspective field worth observing now? -->
 
-## Uncertainty
+## Discovery Snapshot
 
-<!-- Missing voices, geographic bias, source limitations, ambiguous framing, sampling limits, etc. -->
+- **Phenomenon / title:**
+- **Zone / geography:**
+- **Actor class:**
+- **Language:**
+- **Observed / published:**
+- **Discovery context:**
 
-## Duplicate check
+## Source Candidates
 
-- [ ] Existing issue checked
-- [ ] Existing candidate checked
-- [ ] Existing phenomenon checked
+| Source | Actor / publisher | Geography | Language | Link / locator | What it may support |
+|---|---|---|---|---|---|
+| | | | | | |
 
-## Suggested next action
+## PERSPECTIVE Lens
+
+<!-- Actor view, framing, position, reaction, salience, geography, language, audience. Never convert volume into consensus. -->
+
+## Counterevidence & Uncertainty
+
+<!-- Ambiguous framing, sampling limits, source bias, missing context, conflicting observations. -->
+
+## Coverage Gaps / Missing Voices
+
+<!-- Missing actor classes, regions, languages, community voices, worker voices, expert voices, etc. -->
+
+## Duplicate Check
+
+- [ ] Existing research issues checked
+- [ ] Existing candidates checked
+- [ ] Existing phenomena checked
+- [ ] Existing perspective records checked
+
+## Cross-Domain Routing
+
+<!-- EVENT/PERSON/TEXT/LAW/STORY questions go to their owners. Relationship proposals go to Correlation review after evidence exists. -->
+
+## Steward Gate
+
+- [ ] Issue exists before candidate/live work
+- [ ] Actual source content has been inspected
+- [ ] Observation is source-scoped
+- [ ] Article volume is not treated as consensus
+- [ ] PERSPECTIVE ownership boundary is preserved
+
+## Suggested Next Action
 
 - [ ] Keep as research lead
-- [ ] Draft discovery candidate
-- [ ] Strengthen existing candidate
+- [ ] Stage `needs_sources` candidate
+- [ ] Inspect source
 - [ ] Extract SOURCE + OBSERVATION
 - [ ] Resolve PHENOMENON
-- [ ] Extract PERSPECTIVE / FRAMING / REACTION
+- [ ] Prepare PERSPECTIVE / FRAMING / REACTION
 - [ ] Merge with existing research
-- [ ] Reject / insufficient evidence
+- [ ] Reject / duplicate
 
-> Research issues are an inbox, not canonical truth. Observation, perspective, and framing remain source-scoped.
+## Machine Metadata
+
+```text
+ROCKSOUL-RESEARCH-CONTRACT:v1
+ROCKSOUL-RESEARCH-DOMAIN:PERSPECTIVE
+ROCKSOUL-RESEARCH-OWNER:rocksoul-jizz
+ROCKSOUL-RESEARCH-ORIGIN:manual
+ROCKSOUL-RESEARCH-FP:manual
+ROCKSOUL-RESEARCH-STATE:discovered
+```
+
+> **ISSUE FIRST. SOURCE SECOND. CANON LAST.** Observation, perspective and framing remain source-scoped.

@@ -50,7 +50,7 @@ async function seenFingerprints() {
       }
     });
     for (const issue of issues) {
-      for (const match of String(issue.body ?? "").matchAll(/JIZZ-RESEARCH-FP:([a-f0-9]{16})/g)) {
+      for (const match of String(issue.body ?? "").matchAll(/(?:ROCKSOUL-RESEARCH-FP|JIZZ-RESEARCH-FP):([a-f0-9]{16})/g)) {
         seen.add(match[1]);
       }
     }
@@ -61,14 +61,29 @@ async function seenFingerprints() {
 
 function issueBody(topic, query, lead, fingerprint) {
   return [
-    "## Auto perspective research lead",
+    "![ROCKSOUL PERSPECTIVE research](https://raw.githubusercontent.com/bjo163/rocksoul-assets/main/moonwitness/cinematic-hero-pack/png/data-observatory.png)",
     "",
-    `**Lane:** ${topic.id}  `,
-    `**Suggested candidate type:** ${topic.candidate_type}  `,
-    `**Zone hint:** ${topic.zone_hint}  `,
-    `**Query:** ${query}  `,
+    "## Research Card",
     "",
-    "## Discovery metadata",
+    "| Field | Value |",
+    "|---|---|",
+    "| Domain | **PERSPECTIVE** |",
+    "| Canonical owner | \`rocksoul-jizz\` |",
+    "| State | \`discovered\` |",
+    `| Lane | \`${topic.id}\` |`,
+    "| Origin | \`jizz-gdelt-scout\` |",
+    "",
+    "## Research Question",
+    "",
+    "> **How is the world seeing it?**",
+    "",
+    `Observe whether **${clean(lead.title)}** contributes a distinct actor/context view within the ${topic.id} lane.`,
+    "",
+    "## Why This Matters",
+    "",
+    "This lead may reveal a new framing, reaction, actor position, attention shift, or geographic/language perspective. Discovery metadata is not enough for canonical extraction.",
+    "",
+    "## Discovery Snapshot",
     "",
     `- **Title:** ${clean(lead.title)}`,
     `- **Publisher:** ${lead.publisher ?? "unknown"}`,
@@ -77,16 +92,77 @@ function issueBody(topic, query, lead, fingerprint) {
     `- **Published:** ${lead.published_at ?? "unknown"}`,
     `- **Locator:** ${lead.url}`,
     `- **Discovery score:** ${scoreLead(lead)}`,
+    `- **Query:** ${query}`,
     "",
-    "## Steward boundary",
+    "## Source Candidates",
     "",
-    "This is a discovery lead, not a canonical JIZZ observation or perspective. Inspect the actual source, de-duplicate the phenomenon, preserve source/geographic bias, and extract only what the source supports.",
+    "| Source | Actor / publisher | Geography | Language | Link / locator | What it may support |",
+    "|---|---|---|---|---|---|",
+    `| ${clean(lead.title).replace(/\\|/g,"\\\\|")} | ${lead.publisher ?? "unknown"} | ${lead.country ?? "unknown"} | ${lead.language ?? "unknown"} | ${lead.url} | Source-scoped observation / framing candidate |`,
     "",
-    "JIZZ-RESEARCH-FP:" + fingerprint,
-    "JIZZ-RESEARCH-LANE:" + topic.id,
-    "JIZZ-RESEARCH-SCORE:" + scoreLead(lead),
-    "JIZZ-RESEARCH-STATE:discovered"
-  ].join("\n");
+    "## PERSPECTIVE Lens",
+    "",
+    `- **Suggested candidate type:** ${topic.candidate_type}`,
+    `- **Zone hint:** ${topic.zone_hint}`,
+    "- Inspect actor class, audience, framing, position, reaction, salience, language and geography.",
+    "- Do not infer consensus from article count or publisher repetition.",
+    "",
+    "## Counterevidence & Uncertainty",
+    "",
+    "- Actual article/source content not yet inspected.",
+    "- Headline and metadata may misrepresent the full framing.",
+    "- Missing context, counter-statements and alternative actor views remain unknown.",
+    "",
+    "## Coverage Gaps / Missing Voices",
+    "",
+    "- Check whether the field overrepresents one geography, language, publisher class or institutional viewpoint.",
+    "- Seek materially different actor classes when the phenomenon is promoted.",
+    "",
+    "## Duplicate Check",
+    "",
+    "- [ ] Existing research issues checked",
+    "- [ ] Existing candidates checked",
+    "- [ ] Existing phenomena checked",
+    "- [ ] Existing perspective records checked",
+    "",
+    "## Cross-Domain Routing",
+    "",
+    "Route STORY/EVENT/PERSON/TEXT/LAW questions to their owners. Queue possible RELATIONSHIP work for Correlation only after domain evidence exists.",
+    "",
+    "## Steward Gate",
+    "",
+    "- [x] Issue exists before candidate work",
+    "- [ ] Actual source content inspected",
+    "- [x] Discovery metadata marked non-canonical",
+    "- [x] PERSPECTIVE ownership boundary preserved",
+    "",
+    "## Suggested Next Action",
+    "",
+    "- [x] Steward triage required",
+    "- [ ] Stage needs_sources candidate",
+    "- [ ] Inspect source",
+    "- [ ] Extract SOURCE + OBSERVATION",
+    "- [ ] Resolve PHENOMENON",
+    "- [ ] Prepare PERSPECTIVE / FRAMING / REACTION",
+    "- [ ] Reject / duplicate",
+    "",
+    "## Machine Metadata",
+    "",
+    "\`\`\`text",
+    "ROCKSOUL-RESEARCH-CONTRACT:v1",
+    "ROCKSOUL-RESEARCH-DOMAIN:PERSPECTIVE",
+    "ROCKSOUL-RESEARCH-OWNER:rocksoul-jizz",
+    "ROCKSOUL-RESEARCH-ORIGIN:jizz-gdelt-scout",
+    `ROCKSOUL-RESEARCH-FP:${fingerprint}`,
+    "ROCKSOUL-RESEARCH-STATE:discovered",
+    `JIZZ-RESEARCH-FP:${fingerprint}`,
+    `JIZZ-RESEARCH-LANE:${topic.id}`,
+    `JIZZ-RESEARCH-SCORE:${scoreLead(lead)}`,
+    "JIZZ-RESEARCH-STATE:discovered",
+    "\`\`\`",
+    "",
+    "> **ISSUE FIRST. SOURCE SECOND. CANON LAST.**"
+  ].join("\\n");
 }
 
 async function createIssue(topic, query, lead, fingerprint) {
@@ -97,7 +173,7 @@ async function createIssue(topic, query, lead, fingerprint) {
   }
 
   const payload = {
-    title: `[AUTO-RESEARCH] ${clean(lead.title).slice(0, 110)}`,
+    title: `[AUTO-RESEARCH] PERSPECTIVE · ${clean(lead.title).slice(0, 92)}`,
     body: issueBody(topic, query, lead, fingerprint)
   };
 
