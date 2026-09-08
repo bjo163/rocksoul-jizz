@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rocksoul.dev/jizz/schemas/common.schema.json",
+  "title": "JIZZ Common Contract",
+  "x-jizz-schema-version": "jizz.common.v0.1",
+  "$defs": {
+    "id": {"type":"string","minLength":3,"pattern":"^[A-Z][A-Z0-9-]+$"},
+    "timestamp": {"type":"string","format":"date-time"},
+    "confidence": {"type":"number","minimum":0,"maximum":1},
+    "domain": {"const":"PERSPECTIVE"},
+    "zone": {"type":"string","enum":["GLOBAL","REGIONAL","LOCAL","DIGITAL","CULTURAL","TECHNICAL","POLITICAL","ECONOMIC","SCIENTIFIC","COMMUNITY"]},
+    "actor_type": {"type":"string","enum":["MEDIA","GOVERNMENT","CORPORATE","SCIENTIFIC","ACADEMIC","COMMUNITY","CREATOR","ACTIVIST","PUBLIC","INVESTOR","LEGAL","CULTURAL","TECHNICAL","LOCAL","GLOBAL","UNKNOWN"]},
+    "position": {"type":"string","enum":["SUPPORT","OPPOSE","NEUTRAL","MIXED","QUESTIONING","UNKNOWN"]},
+    "freshness": {"type":"string","enum":["FRESH","AGING","STALE","UNAVAILABLE"]},
+    "provenance_id": {"type":"string","pattern":"^PROV-JIZZ-[A-Z0-9-]+$"},
+    "methodology_id": {"type":"string","pattern":"^METH-JIZZ-[A-Z0-9-]+$"},
+    "observation_id": {"type":"string","pattern":"^OBS-JIZZ-[A-Z0-9-]+$"},
+    "phenomenon_id": {"type":"string","pattern":"^PHEN-JIZZ-[A-Z0-9-]+$"}
+  }
+}

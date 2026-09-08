@@ -1,0 +1,24 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://rocksoul.dev/jizz/schemas/signal.schema.json",
+  "title":"JIZZ Signal",
+  "x-jizz-schema-version":"jizz.signal.v0.1",
+  "type":"object",
+  "required":["schema_version","id","record_type","domain","phenomenon_id","signal_type","inputs","methodology_id","algorithm_version","confidence","timestamp","provenance_id"],
+  "properties":{
+    "schema_version":{"const":"jizz.signal.v0.1"},
+    "id":{"type":"string","pattern":"^SIG-JIZZ-[A-Z0-9-]+$"},
+    "record_type":{"const":"SIGNAL"},
+    "domain":{"const":"PERSPECTIVE"},
+    "phenomenon_id":{"type":"string"},
+    "signal_type":{"enum":["EMERGENCE","SURGE","DECLINE","REVIVAL","DIVERGENCE","CONVERGENCE","MUTATION","SPREAD","FRAGMENTATION","RECURRENCE"]},
+    "inputs":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "methodology_id":{"type":"string"},
+    "algorithm_version":{"type":"string"},
+    "confidence":{"type":"number","minimum":0,"maximum":1},
+    "timestamp":{"type":"string","format":"date-time"},
+    "rationale":{"type":"string"},
+    "provenance_id":{"type":"string"}
+  },
+  "additionalProperties":false
+}

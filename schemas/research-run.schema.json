@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://rocksoul.dev/jizz/schemas/research-run.schema.json",
+  "title":"JIZZ Research Run",
+  "x-jizz-schema-version":"jizz.research-run.v0.1",
+  "type":"object",
+  "required":["schema_version","id","record_type","domain","started_at","completed_at","status","methodology_ids","coverage","notes"],
+  "properties":{
+    "schema_version":{"const":"jizz.research-run.v0.1"},
+    "id":{"type":"string","pattern":"^RRUN-JIZZ-[A-Z0-9-]+$"},
+    "record_type":{"const":"RESEARCH_RUN"},
+    "domain":{"const":"PERSPECTIVE"},
+    "started_at":{"type":"string","format":"date-time"},
+    "completed_at":{"type":"string","format":"date-time"},
+    "status":{"enum":["COMPLETE","PARTIAL","FAILED"]},
+    "methodology_ids":{"type":"array","items":{"type":"string"}},
+    "coverage":{"type":"number","minimum":0,"maximum":1},
+    "notes":{"type":"string"}
+  },
+  "additionalProperties":false
+}

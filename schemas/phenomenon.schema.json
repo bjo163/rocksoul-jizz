@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://rocksoul.dev/jizz/schemas/phenomenon.schema.json",
+  "title":"JIZZ Phenomenon",
+  "x-jizz-schema-version":"jizz.phenomenon.v0.1",
+  "type":"object",
+  "required":["schema_version","id","record_type","domain","title","description","zone","created_at","provenance_id"],
+  "properties":{
+    "schema_version":{"const":"jizz.phenomenon.v0.1"},
+    "id":{"type":"string","pattern":"^PHEN-JIZZ-[A-Z0-9-]+$"},
+    "record_type":{"const":"PHENOMENON"},
+    "domain":{"const":"PERSPECTIVE"},
+    "title":{"type":"string","minLength":1},
+    "description":{"type":"string","minLength":1},
+    "zone":{"enum":["GLOBAL","REGIONAL","LOCAL","DIGITAL","CULTURAL","TECHNICAL","POLITICAL","ECONOMIC","SCIENTIFIC","COMMUNITY"]},
+    "keywords":{"type":"array","items":{"type":"string"}},
+    "created_at":{"type":"string","format":"date-time"},
+    "foreign_reference_ids":{"type":"array","items":{"type":"string"}},
+    "provenance_id":{"type":"string"}
+  },
+  "additionalProperties":false
+}

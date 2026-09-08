@@ -1,0 +1,30 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://rocksoul.dev/jizz/schemas/perspective-snapshot.schema.json",
+  "title":"JIZZ Perspective Snapshot",
+  "x-jizz-schema-version":"jizz.snapshot.v0.1",
+  "type":"object",
+  "required":["schema_version","id","record_type","domain","phenomenon_id","timestamp","observation_count","source_count","actor_count","geography_count","perspective_count","framing_distribution","position_distribution","metrics","uncertainty","methodology_id","input_observation_ids","generated_at","provenance_id"],
+  "properties":{
+    "schema_version":{"const":"jizz.snapshot.v0.1"},
+    "id":{"type":"string","pattern":"^SNAP-JIZZ-[A-Z0-9-]+$"},
+    "record_type":{"const":"PERSPECTIVE_SNAPSHOT"},
+    "domain":{"const":"PERSPECTIVE"},
+    "phenomenon_id":{"type":"string"},
+    "timestamp":{"type":"string","format":"date-time"},
+    "observation_count":{"type":"integer","minimum":0},
+    "source_count":{"type":"integer","minimum":0},
+    "actor_count":{"type":"integer","minimum":0},
+    "geography_count":{"type":"integer","minimum":0},
+    "perspective_count":{"type":"integer","minimum":0},
+    "framing_distribution":{"type":"object","additionalProperties":{"type":"integer","minimum":0}},
+    "position_distribution":{"type":"object","additionalProperties":{"type":"integer","minimum":0}},
+    "metrics":{"type":"object","required":["perspective_diversity","framing_diversity","actor_diversity","source_diversity","geographic_spread","disagreement","divergence","convergence"],"additionalProperties":{"type":"number"}},
+    "uncertainty":{"type":"number","minimum":0,"maximum":1},
+    "methodology_id":{"type":"string"},
+    "input_observation_ids":{"type":"array","items":{"type":"string"}},
+    "generated_at":{"type":"string","format":"date-time"},
+    "provenance_id":{"type":"string"}
+  },
+  "additionalProperties":false
+}

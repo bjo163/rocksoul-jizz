@@ -1,0 +1,27 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://rocksoul.dev/jizz/schemas/observation.schema.json",
+  "title":"JIZZ Observation",
+  "x-jizz-schema-version":"jizz.observation.v0.1",
+  "type":"object",
+  "required":["schema_version","id","record_type","domain","source_id","phenomenon_id","observed_at","published_at","observation_type","raw_reference","language","geography","provenance_id"],
+  "properties":{
+    "schema_version":{"const":"jizz.observation.v0.1"},
+    "id":{"type":"string","pattern":"^OBS-JIZZ-[A-Z0-9-]+$"},
+    "record_type":{"const":"OBSERVATION"},
+    "domain":{"const":"PERSPECTIVE"},
+    "source_id":{"type":"string","pattern":"^SRC-JIZZ-[A-Z0-9-]+$"},
+    "phenomenon_id":{"type":"string","pattern":"^PHEN-JIZZ-[A-Z0-9-]+$"},
+    "observed_at":{"type":"string","format":"date-time"},
+    "published_at":{"type":"string","format":"date-time"},
+    "observation_type":{"type":"string","enum":["STATEMENT","MENTION","REACTION","FRAMING","QUOTE_REFERENCE","ATTENTION"]},
+    "actor_reference":{"type":["string","null"]},
+    "subject_reference":{"type":["string","null"]},
+    "extracted_signal":{"type":["string","null"]},
+    "raw_reference":{"type":"object","required":["locator"],"properties":{"locator":{"type":"string"},"note":{"type":"string"}},"additionalProperties":false},
+    "language":{"type":"string"},
+    "geography":{"type":"string"},
+    "provenance_id":{"type":"string"}
+  },
+  "additionalProperties":false
+}

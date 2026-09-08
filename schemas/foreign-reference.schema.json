@@ -1,0 +1,23 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://rocksoul.dev/jizz/schemas/foreign-reference.schema.json",
+  "title":"JIZZ Foreign Reference",
+  "x-jizz-schema-version":"jizz.foreign-reference.v0.1",
+  "type":"object",
+  "required":["schema_version","id","record_type","domain","repository","external_id","foreign_record_type","relation","resolution","verification_state","verified_at","provenance_id"],
+  "properties":{
+    "schema_version":{"const":"jizz.foreign-reference.v0.1"},
+    "id":{"type":"string","pattern":"^FREF-JIZZ-[A-Z0-9-]+$"},
+    "record_type":{"const":"FOREIGN_REFERENCE"},
+    "domain":{"const":"PERSPECTIVE"},
+    "repository":{"enum":["rocksoul-mftl","rocksoul-legend","rocksoul-superhero","rocksoul-rgbl","rocksoul-aws","rocksoul-correlation"]},
+    "external_id":{"type":"string","pattern":"^(mftl|legend|superhero|rgbl|aws|correlation):.+"},
+    "foreign_record_type":{"type":"string"},
+    "relation":{"type":"string"},
+    "resolution":{"enum":["CANONICAL","CANDIDATE","UNRESOLVED"]},
+    "verification_state":{"enum":["UNVERIFIED","VERIFIED","UNRESOLVED","REJECTED"]},
+    "verified_at":{"type":["string","null"],"format":"date-time"},
+    "provenance_id":{"type":"string"}
+  },
+  "additionalProperties":false
+}

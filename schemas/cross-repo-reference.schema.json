@@ -1,0 +1,20 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://rocksoul.dev/jizz/schemas/cross-repo-reference.schema.json",
+  "title":"JIZZ Cross-Repo Reference",
+  "x-jizz-schema-version":"jizz.cross-repo-reference.v0.1",
+  "type":"object",
+  "required":["schema_version","id","record_type","domain","local_record_id","foreign_reference_id","usage","created_at","provenance_id"],
+  "properties":{
+    "schema_version":{"const":"jizz.cross-repo-reference.v0.1"},
+    "id":{"type":"string","pattern":"^XREF-JIZZ-[A-Z0-9-]+$"},
+    "record_type":{"const":"CROSS_REPO_REFERENCE"},
+    "domain":{"const":"PERSPECTIVE"},
+    "local_record_id":{"type":"string"},
+    "foreign_reference_id":{"type":"string","pattern":"^FREF-JIZZ-[A-Z0-9-]+$"},
+    "usage":{"enum":["SUBJECT","ACTOR","CONTEXT","CORRELATION_POINTER"]},
+    "created_at":{"type":"string","format":"date-time"},
+    "provenance_id":{"type":"string"}
+  },
+  "additionalProperties":false
+}

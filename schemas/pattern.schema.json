@@ -1,0 +1,23 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://rocksoul.dev/jizz/schemas/pattern.schema.json",
+  "title":"JIZZ Pattern",
+  "x-jizz-schema-version":"jizz.pattern.v0.1",
+  "type":"object",
+  "required":["schema_version","id","record_type","domain","phenomenon_id","pattern_type","description","input_ids","methodology_id","confidence","generated_at","provenance_id"],
+  "properties":{
+    "schema_version":{"const":"jizz.pattern.v0.1"},
+    "id":{"type":"string","pattern":"^PAT-JIZZ-[A-Z0-9-]+$"},
+    "record_type":{"const":"PATTERN"},
+    "domain":{"const":"PERSPECTIVE"},
+    "phenomenon_id":{"type":"string"},
+    "pattern_type":{"enum":["PERSPECTIVE_SHIFT","FRAMING_SHIFT","REACTION_SHIFT","ATTENTION_SHIFT","ACTOR_SHIFT","GEOGRAPHIC_SHIFT"]},
+    "description":{"type":"string"},
+    "input_ids":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "methodology_id":{"type":"string"},
+    "confidence":{"type":"number","minimum":0,"maximum":1},
+    "generated_at":{"type":"string","format":"date-time"},
+    "provenance_id":{"type":"string"}
+  },
+  "additionalProperties":false
+}

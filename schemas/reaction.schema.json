@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://rocksoul.dev/jizz/schemas/reaction.schema.json",
+  "title":"JIZZ Reaction",
+  "x-jizz-schema-version":"jizz.reaction.v0.1",
+  "type":"object",
+  "required":["schema_version","id","record_type","domain","phenomenon_id","actor_reference","reaction_type","observed_at","observation_refs","provenance_id"],
+  "properties":{
+    "schema_version":{"const":"jizz.reaction.v0.1"},
+    "id":{"type":"string","pattern":"^REACT-JIZZ-[A-Z0-9-]+$"},
+    "record_type":{"const":"REACTION"},
+    "domain":{"const":"PERSPECTIVE"},
+    "phenomenon_id":{"type":"string"},
+    "actor_reference":{"type":"string"},
+    "reaction_type":{"enum":["SUPPORT","CRITICISM","REJECTION","AMPLIFICATION","SATIRE","BOYCOTT","ADOPTION","WARNING","CORRECTION","DEFENSE","QUESTIONING","SILENCE"]},
+    "sentiment":{"enum":["POSITIVE","NEGATIVE","NEUTRAL","MIXED","UNKNOWN"]},
+    "observed_at":{"type":"string","format":"date-time"},
+    "observation_refs":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "provenance_id":{"type":"string"}
+  },
+  "additionalProperties":false
+}

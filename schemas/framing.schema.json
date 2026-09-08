@@ -1,0 +1,23 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://rocksoul.dev/jizz/schemas/framing.schema.json",
+  "title":"JIZZ Framing",
+  "x-jizz-schema-version":"jizz.framing.v0.1",
+  "type":"object",
+  "required":["schema_version","id","record_type","domain","phenomenon_id","perspective_id","dimension","label","observed_at","valid_from","provenance_id"],
+  "properties":{
+    "schema_version":{"const":"jizz.framing.v0.1"},
+    "id":{"type":"string","pattern":"^FRAME-JIZZ-[A-Z0-9-]+$"},
+    "record_type":{"const":"FRAMING"},
+    "domain":{"const":"PERSPECTIVE"},
+    "phenomenon_id":{"type":"string"},
+    "perspective_id":{"type":"string","pattern":"^PERSP-JIZZ-[A-Z0-9-]+$"},
+    "dimension":{"enum":["ECONOMIC","POLITICAL","SECURITY","HUMANITARIAN","TECHNOLOGICAL","SCIENTIFIC","CULTURAL","RELIGIOUS","ENVIRONMENTAL","LEGAL","SOCIAL","ETHICAL","HISTORICAL","IDENTITY","LOCAL","GLOBAL"]},
+    "label":{"type":"string","minLength":1},
+    "observed_at":{"type":"string","format":"date-time"},
+    "valid_from":{"type":"string","format":"date-time"},
+    "valid_until":{"type":["string","null"],"format":"date-time"},
+    "provenance_id":{"type":"string"}
+  },
+  "additionalProperties":false
+}

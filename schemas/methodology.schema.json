@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://rocksoul.dev/jizz/schemas/methodology.schema.json",
+  "title":"JIZZ Methodology",
+  "x-jizz-schema-version":"jizz.methodology.v0.1",
+  "type":"object",
+  "required":["schema_version","id","record_type","domain","name","version","formulae","normalization","input_types","description","created_at"],
+  "properties":{
+    "schema_version":{"const":"jizz.methodology.v0.1"},
+    "id":{"type":"string","pattern":"^METH-JIZZ-[A-Z0-9-]+$"},
+    "record_type":{"const":"METHODOLOGY"},
+    "domain":{"const":"PERSPECTIVE"},
+    "name":{"type":"string"},
+    "version":{"type":"string"},
+    "formulae":{"type":"object","additionalProperties":{"type":"string"}},
+    "normalization":{"type":"string"},
+    "input_types":{"type":"array","items":{"type":"string"}},
+    "description":{"type":"string"},
+    "created_at":{"type":"string","format":"date-time"}
+  },
+  "additionalProperties":false
+}

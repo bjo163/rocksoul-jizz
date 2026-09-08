@@ -1,0 +1,1051 @@
+{
+  "schema_version": "jizz.bundle.v0.1",
+  "domain": "PERSPECTIVE",
+  "phenomenon": {
+    "schema_version": "jizz.phenomenon.v0.1",
+    "id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+    "record_type": "PHENOMENON",
+    "domain": "PERSPECTIVE",
+    "title": "AI workforce reduction",
+    "description": "Synthetic phenomenon used to demonstrate multi-perspective observation, temporal change, and explainable analytics.",
+    "zone": "GLOBAL",
+    "keywords": [
+      "AI",
+      "workforce",
+      "labor",
+      "productivity"
+    ],
+    "created_at": "2026-01-15T12:00:00Z",
+    "foreign_reference_ids": [],
+    "provenance_id": "PROV-JIZZ-GOLDEN-001"
+  },
+  "sources": [
+    {
+      "schema_version": "jizz.source.v0.1",
+      "id": "SRC-JIZZ-MEDIA-001",
+      "record_type": "SOURCE",
+      "domain": "PERSPECTIVE",
+      "source_type": "ARTICLE",
+      "publisher": "publisher:synthetic-media",
+      "author": null,
+      "organization": "publisher:synthetic-media",
+      "url": null,
+      "published_at": "2026-01-10T09:00:00Z",
+      "retrieved_at": "2026-02-16T00:00:00Z",
+      "language": "en",
+      "country": "US",
+      "region": null,
+      "content_hash": "sha256-synthetic-media-001",
+      "freshness": "FRESH",
+      "metadata": {
+        "fixture": true
+      },
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.source.v0.1",
+      "id": "SRC-JIZZ-CORPORATE-001",
+      "record_type": "SOURCE",
+      "domain": "PERSPECTIVE",
+      "source_type": "STATEMENT",
+      "publisher": "organization:synthetic-corporate",
+      "author": null,
+      "organization": "organization:synthetic-corporate",
+      "url": null,
+      "published_at": "2026-01-10T09:00:00Z",
+      "retrieved_at": "2026-02-16T00:00:00Z",
+      "language": "en",
+      "country": "US",
+      "region": null,
+      "content_hash": "sha256-synthetic-corporate-001",
+      "freshness": "FRESH",
+      "metadata": {
+        "fixture": true
+      },
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.source.v0.1",
+      "id": "SRC-JIZZ-WORKERS-001",
+      "record_type": "SOURCE",
+      "domain": "PERSPECTIVE",
+      "source_type": "STATEMENT",
+      "publisher": "community:synthetic-workers",
+      "author": null,
+      "organization": "community:synthetic-workers",
+      "url": null,
+      "published_at": "2026-01-10T09:00:00Z",
+      "retrieved_at": "2026-02-16T00:00:00Z",
+      "language": "en",
+      "country": "US",
+      "region": null,
+      "content_hash": "sha256-synthetic-community-001",
+      "freshness": "FRESH",
+      "metadata": {
+        "fixture": true
+      },
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.source.v0.1",
+      "id": "SRC-JIZZ-INVESTORS-001",
+      "record_type": "SOURCE",
+      "domain": "PERSPECTIVE",
+      "source_type": "STATEMENT",
+      "publisher": "community:synthetic-investors",
+      "author": null,
+      "organization": "community:synthetic-investors",
+      "url": null,
+      "published_at": "2026-02-10T09:00:00Z",
+      "retrieved_at": "2026-02-16T00:00:00Z",
+      "language": "en",
+      "country": "GB",
+      "region": null,
+      "content_hash": "sha256-synthetic-investor-001",
+      "freshness": "FRESH",
+      "metadata": {
+        "fixture": true
+      },
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.source.v0.1",
+      "id": "SRC-JIZZ-ACADEMIA-001",
+      "record_type": "SOURCE",
+      "domain": "PERSPECTIVE",
+      "source_type": "ARTICLE",
+      "publisher": "organization:synthetic-academia",
+      "author": null,
+      "organization": "organization:synthetic-academia",
+      "url": null,
+      "published_at": "2026-02-10T09:00:00Z",
+      "retrieved_at": "2026-02-16T00:00:00Z",
+      "language": "en",
+      "country": "DE",
+      "region": null,
+      "content_hash": "sha256-synthetic-academic-001",
+      "freshness": "FRESH",
+      "metadata": {
+        "fixture": true
+      },
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.source.v0.1",
+      "id": "SRC-JIZZ-CREATORS-001",
+      "record_type": "SOURCE",
+      "domain": "PERSPECTIVE",
+      "source_type": "STATEMENT",
+      "publisher": "creator:synthetic-creator",
+      "author": null,
+      "organization": "creator:synthetic-creator",
+      "url": null,
+      "published_at": "2026-02-10T09:00:00Z",
+      "retrieved_at": "2026-02-16T00:00:00Z",
+      "language": "en",
+      "country": "ID",
+      "region": null,
+      "content_hash": "sha256-synthetic-creator-001",
+      "freshness": "FRESH",
+      "metadata": {
+        "fixture": true
+      },
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    }
+  ],
+  "observations": [
+    {
+      "schema_version": "jizz.observation.v0.1",
+      "id": "OBS-JIZZ-T1-001",
+      "record_type": "OBSERVATION",
+      "domain": "PERSPECTIVE",
+      "source_id": "SRC-JIZZ-MEDIA-001",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "observed_at": "2026-01-15T12:00:00Z",
+      "published_at": "2026-01-10T09:00:00Z",
+      "observation_type": "FRAMING",
+      "actor_reference": "publisher:synthetic-media",
+      "subject_reference": null,
+      "extracted_signal": null,
+      "raw_reference": {
+        "locator": "synthetic:t1:1",
+        "note": "Illustrative fixture; no external factual claim."
+      },
+      "language": "en",
+      "geography": "US",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.observation.v0.1",
+      "id": "OBS-JIZZ-T1-002",
+      "record_type": "OBSERVATION",
+      "domain": "PERSPECTIVE",
+      "source_id": "SRC-JIZZ-CORPORATE-001",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "observed_at": "2026-01-15T12:00:00Z",
+      "published_at": "2026-01-10T09:00:00Z",
+      "observation_type": "FRAMING",
+      "actor_reference": "organization:synthetic-corporate",
+      "subject_reference": null,
+      "extracted_signal": null,
+      "raw_reference": {
+        "locator": "synthetic:t1:2",
+        "note": "Illustrative fixture; no external factual claim."
+      },
+      "language": "en",
+      "geography": "US",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.observation.v0.1",
+      "id": "OBS-JIZZ-T1-003",
+      "record_type": "OBSERVATION",
+      "domain": "PERSPECTIVE",
+      "source_id": "SRC-JIZZ-WORKERS-001",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "observed_at": "2026-01-15T12:00:00Z",
+      "published_at": "2026-01-10T09:00:00Z",
+      "observation_type": "FRAMING",
+      "actor_reference": "community:synthetic-workers",
+      "subject_reference": null,
+      "extracted_signal": null,
+      "raw_reference": {
+        "locator": "synthetic:t1:3",
+        "note": "Illustrative fixture; no external factual claim."
+      },
+      "language": "en",
+      "geography": "US",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.observation.v0.1",
+      "id": "OBS-JIZZ-T2-001",
+      "record_type": "OBSERVATION",
+      "domain": "PERSPECTIVE",
+      "source_id": "SRC-JIZZ-MEDIA-001",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "published_at": "2026-02-10T09:00:00Z",
+      "observation_type": "FRAMING",
+      "actor_reference": "publisher:synthetic-media",
+      "subject_reference": null,
+      "extracted_signal": null,
+      "raw_reference": {
+        "locator": "synthetic:t2:1",
+        "note": "Illustrative fixture; no external factual claim."
+      },
+      "language": "en",
+      "geography": "US",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.observation.v0.1",
+      "id": "OBS-JIZZ-T2-002",
+      "record_type": "OBSERVATION",
+      "domain": "PERSPECTIVE",
+      "source_id": "SRC-JIZZ-CORPORATE-001",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "published_at": "2026-02-10T09:00:00Z",
+      "observation_type": "FRAMING",
+      "actor_reference": "organization:synthetic-corporate",
+      "subject_reference": null,
+      "extracted_signal": null,
+      "raw_reference": {
+        "locator": "synthetic:t2:2",
+        "note": "Illustrative fixture; no external factual claim."
+      },
+      "language": "en",
+      "geography": "US",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.observation.v0.1",
+      "id": "OBS-JIZZ-T2-003",
+      "record_type": "OBSERVATION",
+      "domain": "PERSPECTIVE",
+      "source_id": "SRC-JIZZ-WORKERS-001",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "published_at": "2026-02-10T09:00:00Z",
+      "observation_type": "FRAMING",
+      "actor_reference": "community:synthetic-workers",
+      "subject_reference": null,
+      "extracted_signal": null,
+      "raw_reference": {
+        "locator": "synthetic:t2:3",
+        "note": "Illustrative fixture; no external factual claim."
+      },
+      "language": "en",
+      "geography": "US",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.observation.v0.1",
+      "id": "OBS-JIZZ-T2-004",
+      "record_type": "OBSERVATION",
+      "domain": "PERSPECTIVE",
+      "source_id": "SRC-JIZZ-INVESTORS-001",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "published_at": "2026-02-10T09:00:00Z",
+      "observation_type": "FRAMING",
+      "actor_reference": "community:synthetic-investors",
+      "subject_reference": null,
+      "extracted_signal": null,
+      "raw_reference": {
+        "locator": "synthetic:t2:4",
+        "note": "Illustrative fixture; no external factual claim."
+      },
+      "language": "en",
+      "geography": "GB",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.observation.v0.1",
+      "id": "OBS-JIZZ-T2-005",
+      "record_type": "OBSERVATION",
+      "domain": "PERSPECTIVE",
+      "source_id": "SRC-JIZZ-ACADEMIA-001",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "published_at": "2026-02-10T09:00:00Z",
+      "observation_type": "FRAMING",
+      "actor_reference": "organization:synthetic-academia",
+      "subject_reference": null,
+      "extracted_signal": null,
+      "raw_reference": {
+        "locator": "synthetic:t2:5",
+        "note": "Illustrative fixture; no external factual claim."
+      },
+      "language": "en",
+      "geography": "DE",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.observation.v0.1",
+      "id": "OBS-JIZZ-T2-006",
+      "record_type": "OBSERVATION",
+      "domain": "PERSPECTIVE",
+      "source_id": "SRC-JIZZ-CREATORS-001",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "published_at": "2026-02-10T09:00:00Z",
+      "observation_type": "FRAMING",
+      "actor_reference": "creator:synthetic-creator",
+      "subject_reference": null,
+      "extracted_signal": null,
+      "raw_reference": {
+        "locator": "synthetic:t2:6",
+        "note": "Illustrative fixture; no external factual claim."
+      },
+      "language": "en",
+      "geography": "ID",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    }
+  ],
+  "perspectives": [
+    {
+      "schema_version": "jizz.perspective.v0.1",
+      "id": "PERSP-JIZZ-MEDIA-001",
+      "record_type": "PERSPECTIVE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "actor_reference": "publisher:synthetic-media",
+      "actor_type": "MEDIA",
+      "zone": "GLOBAL",
+      "geography": "US",
+      "audience_scope": "synthetic fixture",
+      "summary": "economic restructuring",
+      "framing_ids": [
+        "FRAME-JIZZ-MEDIA-001"
+      ],
+      "position": "MIXED",
+      "salience": 0.6,
+      "observed_at": "2026-01-15T12:00:00Z",
+      "valid_from": "2026-01-15T12:00:00Z",
+      "valid_until": "2026-02-01T00:00:00Z",
+      "observation_refs": [
+        "OBS-JIZZ-T1-001"
+      ],
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.perspective.v0.1",
+      "id": "PERSP-JIZZ-CORPORATE-001",
+      "record_type": "PERSPECTIVE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "actor_reference": "organization:synthetic-corporate",
+      "actor_type": "CORPORATE",
+      "zone": "GLOBAL",
+      "geography": "US",
+      "audience_scope": "synthetic fixture",
+      "summary": "productivity optimization",
+      "framing_ids": [
+        "FRAME-JIZZ-CORPORATE-001"
+      ],
+      "position": "MIXED",
+      "salience": 0.6,
+      "observed_at": "2026-01-15T12:00:00Z",
+      "valid_from": "2026-01-15T12:00:00Z",
+      "valid_until": "2026-02-01T00:00:00Z",
+      "observation_refs": [
+        "OBS-JIZZ-T1-002"
+      ],
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.perspective.v0.1",
+      "id": "PERSP-JIZZ-WORKERS-001",
+      "record_type": "PERSPECTIVE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "actor_reference": "community:synthetic-workers",
+      "actor_type": "COMMUNITY",
+      "zone": "GLOBAL",
+      "geography": "US",
+      "audience_scope": "synthetic fixture",
+      "summary": "job displacement",
+      "framing_ids": [
+        "FRAME-JIZZ-WORKERS-001"
+      ],
+      "position": "MIXED",
+      "salience": 0.6,
+      "observed_at": "2026-01-15T12:00:00Z",
+      "valid_from": "2026-01-15T12:00:00Z",
+      "valid_until": "2026-02-01T00:00:00Z",
+      "observation_refs": [
+        "OBS-JIZZ-T1-003"
+      ],
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.perspective.v0.1",
+      "id": "PERSP-JIZZ-MEDIA-002",
+      "record_type": "PERSPECTIVE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "actor_reference": "publisher:synthetic-media",
+      "actor_type": "MEDIA",
+      "zone": "GLOBAL",
+      "geography": "US",
+      "audience_scope": "synthetic fixture",
+      "summary": "economic restructuring",
+      "framing_ids": [
+        "FRAME-JIZZ-MEDIA-002"
+      ],
+      "position": "NEUTRAL",
+      "salience": 0.7,
+      "observed_at": "2026-02-15T12:00:00Z",
+      "valid_from": "2026-02-15T12:00:00Z",
+      "valid_until": null,
+      "observation_refs": [
+        "OBS-JIZZ-T2-001"
+      ],
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.perspective.v0.1",
+      "id": "PERSP-JIZZ-CORPORATE-002",
+      "record_type": "PERSPECTIVE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "actor_reference": "organization:synthetic-corporate",
+      "actor_type": "CORPORATE",
+      "zone": "GLOBAL",
+      "geography": "US",
+      "audience_scope": "synthetic fixture",
+      "summary": "productivity optimization",
+      "framing_ids": [
+        "FRAME-JIZZ-CORPORATE-002"
+      ],
+      "position": "SUPPORT",
+      "salience": 0.7,
+      "observed_at": "2026-02-15T12:00:00Z",
+      "valid_from": "2026-02-15T12:00:00Z",
+      "valid_until": null,
+      "observation_refs": [
+        "OBS-JIZZ-T2-002"
+      ],
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.perspective.v0.1",
+      "id": "PERSP-JIZZ-WORKERS-002",
+      "record_type": "PERSPECTIVE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "actor_reference": "community:synthetic-workers",
+      "actor_type": "COMMUNITY",
+      "zone": "GLOBAL",
+      "geography": "US",
+      "audience_scope": "synthetic fixture",
+      "summary": "job displacement",
+      "framing_ids": [
+        "FRAME-JIZZ-WORKERS-002"
+      ],
+      "position": "OPPOSE",
+      "salience": 0.7,
+      "observed_at": "2026-02-15T12:00:00Z",
+      "valid_from": "2026-02-15T12:00:00Z",
+      "valid_until": null,
+      "observation_refs": [
+        "OBS-JIZZ-T2-003"
+      ],
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.perspective.v0.1",
+      "id": "PERSP-JIZZ-INVESTORS-001",
+      "record_type": "PERSPECTIVE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "actor_reference": "community:synthetic-investors",
+      "actor_type": "INVESTOR",
+      "zone": "GLOBAL",
+      "geography": "GB",
+      "audience_scope": "synthetic fixture",
+      "summary": "margin improvement",
+      "framing_ids": [
+        "FRAME-JIZZ-INVESTORS-001"
+      ],
+      "position": "SUPPORT",
+      "salience": 0.7,
+      "observed_at": "2026-02-15T12:00:00Z",
+      "valid_from": "2026-02-15T12:00:00Z",
+      "valid_until": null,
+      "observation_refs": [
+        "OBS-JIZZ-T2-004"
+      ],
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.perspective.v0.1",
+      "id": "PERSP-JIZZ-ACADEMIA-001",
+      "record_type": "PERSPECTIVE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "actor_reference": "organization:synthetic-academia",
+      "actor_type": "ACADEMIC",
+      "zone": "GLOBAL",
+      "geography": "DE",
+      "audience_scope": "synthetic fixture",
+      "summary": "labor transformation",
+      "framing_ids": [
+        "FRAME-JIZZ-ACADEMIA-001"
+      ],
+      "position": "QUESTIONING",
+      "salience": 0.7,
+      "observed_at": "2026-02-15T12:00:00Z",
+      "valid_from": "2026-02-15T12:00:00Z",
+      "valid_until": null,
+      "observation_refs": [
+        "OBS-JIZZ-T2-005"
+      ],
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.perspective.v0.1",
+      "id": "PERSP-JIZZ-CREATORS-001",
+      "record_type": "PERSPECTIVE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "actor_reference": "creator:synthetic-creator",
+      "actor_type": "CREATOR",
+      "zone": "GLOBAL",
+      "geography": "ID",
+      "audience_scope": "synthetic fixture",
+      "summary": "AI takeover",
+      "framing_ids": [
+        "FRAME-JIZZ-CREATORS-001"
+      ],
+      "position": "OPPOSE",
+      "salience": 0.7,
+      "observed_at": "2026-02-15T12:00:00Z",
+      "valid_from": "2026-02-15T12:00:00Z",
+      "valid_until": null,
+      "observation_refs": [
+        "OBS-JIZZ-T2-006"
+      ],
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    }
+  ],
+  "framings": [
+    {
+      "schema_version": "jizz.framing.v0.1",
+      "id": "FRAME-JIZZ-MEDIA-001",
+      "record_type": "FRAMING",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "perspective_id": "PERSP-JIZZ-MEDIA-001",
+      "dimension": "ECONOMIC",
+      "label": "economic restructuring",
+      "observed_at": "2026-01-15T12:00:00Z",
+      "valid_from": "2026-01-15T12:00:00Z",
+      "valid_until": "2026-02-01T00:00:00Z",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.framing.v0.1",
+      "id": "FRAME-JIZZ-CORPORATE-001",
+      "record_type": "FRAMING",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "perspective_id": "PERSP-JIZZ-CORPORATE-001",
+      "dimension": "ECONOMIC",
+      "label": "productivity optimization",
+      "observed_at": "2026-01-15T12:00:00Z",
+      "valid_from": "2026-01-15T12:00:00Z",
+      "valid_until": "2026-02-01T00:00:00Z",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.framing.v0.1",
+      "id": "FRAME-JIZZ-WORKERS-001",
+      "record_type": "FRAMING",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "perspective_id": "PERSP-JIZZ-WORKERS-001",
+      "dimension": "SOCIAL",
+      "label": "job displacement",
+      "observed_at": "2026-01-15T12:00:00Z",
+      "valid_from": "2026-01-15T12:00:00Z",
+      "valid_until": "2026-02-01T00:00:00Z",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.framing.v0.1",
+      "id": "FRAME-JIZZ-MEDIA-002",
+      "record_type": "FRAMING",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "perspective_id": "PERSP-JIZZ-MEDIA-002",
+      "dimension": "ECONOMIC",
+      "label": "economic restructuring",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "valid_from": "2026-02-15T12:00:00Z",
+      "valid_until": null,
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.framing.v0.1",
+      "id": "FRAME-JIZZ-CORPORATE-002",
+      "record_type": "FRAMING",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "perspective_id": "PERSP-JIZZ-CORPORATE-002",
+      "dimension": "TECHNOLOGICAL",
+      "label": "productivity optimization",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "valid_from": "2026-02-15T12:00:00Z",
+      "valid_until": null,
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.framing.v0.1",
+      "id": "FRAME-JIZZ-WORKERS-002",
+      "record_type": "FRAMING",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "perspective_id": "PERSP-JIZZ-WORKERS-002",
+      "dimension": "SOCIAL",
+      "label": "job displacement",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "valid_from": "2026-02-15T12:00:00Z",
+      "valid_until": null,
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.framing.v0.1",
+      "id": "FRAME-JIZZ-INVESTORS-001",
+      "record_type": "FRAMING",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "perspective_id": "PERSP-JIZZ-INVESTORS-001",
+      "dimension": "ECONOMIC",
+      "label": "margin improvement",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "valid_from": "2026-02-15T12:00:00Z",
+      "valid_until": null,
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.framing.v0.1",
+      "id": "FRAME-JIZZ-ACADEMIA-001",
+      "record_type": "FRAMING",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "perspective_id": "PERSP-JIZZ-ACADEMIA-001",
+      "dimension": "SCIENTIFIC",
+      "label": "labor transformation",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "valid_from": "2026-02-15T12:00:00Z",
+      "valid_until": null,
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.framing.v0.1",
+      "id": "FRAME-JIZZ-CREATORS-001",
+      "record_type": "FRAMING",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "perspective_id": "PERSP-JIZZ-CREATORS-001",
+      "dimension": "CULTURAL",
+      "label": "AI takeover",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "valid_from": "2026-02-15T12:00:00Z",
+      "valid_until": null,
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    }
+  ],
+  "reactions": [
+    {
+      "schema_version": "jizz.reaction.v0.1",
+      "id": "REACT-JIZZ-WORKERS-001",
+      "record_type": "REACTION",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "actor_reference": "community:synthetic-workers",
+      "reaction_type": "CRITICISM",
+      "sentiment": "NEGATIVE",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "observation_refs": [
+        "OBS-JIZZ-T2-003"
+      ],
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.reaction.v0.1",
+      "id": "REACT-JIZZ-INVESTORS-001",
+      "record_type": "REACTION",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "actor_reference": "community:synthetic-investors",
+      "reaction_type": "SUPPORT",
+      "sentiment": "POSITIVE",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "observation_refs": [
+        "OBS-JIZZ-T2-004"
+      ],
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.reaction.v0.1",
+      "id": "REACT-JIZZ-CREATORS-001",
+      "record_type": "REACTION",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "actor_reference": "creator:synthetic-creator",
+      "reaction_type": "AMPLIFICATION",
+      "sentiment": "NEGATIVE",
+      "observed_at": "2026-02-15T12:00:00Z",
+      "observation_refs": [
+        "OBS-JIZZ-T2-006"
+      ],
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    }
+  ],
+  "signals": [
+    {
+      "schema_version": "jizz.signal.v0.1",
+      "id": "SIG-JIZZ-FRAGMENTATION-001",
+      "record_type": "SIGNAL",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "signal_type": "FRAGMENTATION",
+      "inputs": [
+        "OBS-JIZZ-T2-001",
+        "OBS-JIZZ-T2-002",
+        "OBS-JIZZ-T2-003",
+        "OBS-JIZZ-T2-004",
+        "OBS-JIZZ-T2-005",
+        "OBS-JIZZ-T2-006"
+      ],
+      "methodology_id": "METH-JIZZ-DIVERSITY-001",
+      "algorithm_version": "jizz.analytics.v0.1",
+      "confidence": 0.86,
+      "timestamp": "2026-02-15T12:00:00Z",
+      "rationale": "Framing diversity, disagreement, and observation volume increased together.",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    }
+  ],
+  "changes": [
+    {
+      "schema_version": "jizz.change.v0.1",
+      "id": "CHG-JIZZ-T1-T2-001",
+      "record_type": "CHANGE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "from": "2026-01-15T12:00:00Z",
+      "to": "2026-02-15T12:00:00Z",
+      "dimensions": {
+        "VOLUME": 6,
+        "GEOGRAPHY": 3,
+        "FRAMING": 0.051428,
+        "ACTOR_DIVERSITY": 3,
+        "SOURCE_DIVERSITY": 3,
+        "PERSPECTIVE_DIVERSITY": 0.333333,
+        "DISAGREEMENT": 0.959148,
+        "CONVERGENCE": -0.505288
+      },
+      "input_signal_ids": [
+        "SIG-JIZZ-FRAGMENTATION-001"
+      ],
+      "input_observation_ids": [
+        "OBS-JIZZ-T1-001",
+        "OBS-JIZZ-T1-002",
+        "OBS-JIZZ-T1-003",
+        "OBS-JIZZ-T2-001",
+        "OBS-JIZZ-T2-002",
+        "OBS-JIZZ-T2-003",
+        "OBS-JIZZ-T2-004",
+        "OBS-JIZZ-T2-005",
+        "OBS-JIZZ-T2-006"
+      ],
+      "methodology_id": "METH-JIZZ-DIVERSITY-001",
+      "algorithm_version": "jizz.analytics.v0.1",
+      "confidence": 0.84,
+      "summary": "Economic framing volume increased while framing diversity and disagreement rose and convergence fell.",
+      "generated_at": "2026-02-16T00:00:00Z",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    }
+  ],
+  "perspective_snapshots": [
+    {
+      "schema_version": "jizz.snapshot.v0.1",
+      "id": "SNAP-JIZZ-T1-001",
+      "record_type": "PERSPECTIVE_SNAPSHOT",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "timestamp": "2026-01-15T12:00:00Z",
+      "observation_count": 3,
+      "source_count": 3,
+      "actor_count": 3,
+      "geography_count": 1,
+      "perspective_count": 3,
+      "framing_distribution": {
+        "ECONOMIC": 2,
+        "SOCIAL": 1
+      },
+      "position_distribution": {
+        "MIXED": 3
+      },
+      "metrics": {
+        "perspective_diversity": 0.666667,
+        "framing_diversity": 0.918296,
+        "actor_diversity": 1,
+        "source_diversity": 1,
+        "geographic_spread": 0.333333,
+        "disagreement": 0,
+        "divergence": 0.459148,
+        "convergence": 0.540852
+      },
+      "uncertainty": 0.15,
+      "methodology_id": "METH-JIZZ-DIVERSITY-001",
+      "input_observation_ids": [
+        "OBS-JIZZ-T1-001",
+        "OBS-JIZZ-T1-002",
+        "OBS-JIZZ-T1-003"
+      ],
+      "generated_at": "2026-02-16T00:00:00Z",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    },
+    {
+      "schema_version": "jizz.snapshot.v0.1",
+      "id": "SNAP-JIZZ-T2-001",
+      "record_type": "PERSPECTIVE_SNAPSHOT",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "timestamp": "2026-02-15T12:00:00Z",
+      "observation_count": 9,
+      "source_count": 6,
+      "actor_count": 6,
+      "geography_count": 4,
+      "perspective_count": 6,
+      "framing_distribution": {
+        "ECONOMIC": 2,
+        "TECHNOLOGICAL": 1,
+        "SOCIAL": 1,
+        "SCIENTIFIC": 1,
+        "CULTURAL": 1
+      },
+      "position_distribution": {
+        "NEUTRAL": 1,
+        "SUPPORT": 2,
+        "OPPOSE": 2,
+        "QUESTIONING": 1
+      },
+      "metrics": {
+        "perspective_diversity": 1,
+        "framing_diversity": 0.969724,
+        "actor_diversity": 1,
+        "source_diversity": 0.666667,
+        "geographic_spread": 0.666667,
+        "disagreement": 0.959148,
+        "divergence": 0.964436,
+        "convergence": 0.035564
+      },
+      "uncertainty": 0.12,
+      "methodology_id": "METH-JIZZ-DIVERSITY-001",
+      "input_observation_ids": [
+        "OBS-JIZZ-T1-001",
+        "OBS-JIZZ-T1-002",
+        "OBS-JIZZ-T1-003",
+        "OBS-JIZZ-T2-001",
+        "OBS-JIZZ-T2-002",
+        "OBS-JIZZ-T2-003",
+        "OBS-JIZZ-T2-004",
+        "OBS-JIZZ-T2-005",
+        "OBS-JIZZ-T2-006"
+      ],
+      "generated_at": "2026-02-16T00:00:00Z",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    }
+  ],
+  "trends": [
+    {
+      "schema_version": "jizz.trend.v0.1",
+      "id": "TREND-JIZZ-RISING-001",
+      "record_type": "TREND",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "state": "RISING",
+      "input_signal_ids": [
+        "SIG-JIZZ-FRAGMENTATION-001"
+      ],
+      "input_change_ids": [
+        "CHG-JIZZ-T1-T2-001"
+      ],
+      "methodology_id": "METH-JIZZ-DIVERSITY-001",
+      "confidence": 0.82,
+      "generated_at": "2026-02-16T00:00:00Z",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    }
+  ],
+  "patterns": [
+    {
+      "schema_version": "jizz.pattern.v0.1",
+      "id": "PAT-JIZZ-FRAMING-SHIFT-001",
+      "record_type": "PATTERN",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "pattern_type": "FRAMING_SHIFT",
+      "description": "The field expanded from two framing dimensions to five, with new scientific and cultural angles.",
+      "input_ids": [
+        "SNAP-JIZZ-T1-001",
+        "SNAP-JIZZ-T2-001",
+        "CHG-JIZZ-T1-T2-001"
+      ],
+      "methodology_id": "METH-JIZZ-DIVERSITY-001",
+      "confidence": 0.88,
+      "generated_at": "2026-02-16T00:00:00Z",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    }
+  ],
+  "insights": [
+    {
+      "schema_version": "jizz.insight.v0.1",
+      "id": "INS-JIZZ-SPREAD-CONSENSUS-001",
+      "record_type": "INSIGHT",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-REDUCTION",
+      "text": "The phenomenon is spreading faster than consensus is forming.",
+      "input_observation_ids": [
+        "OBS-JIZZ-T1-001",
+        "OBS-JIZZ-T1-002",
+        "OBS-JIZZ-T1-003",
+        "OBS-JIZZ-T2-001",
+        "OBS-JIZZ-T2-002",
+        "OBS-JIZZ-T2-003",
+        "OBS-JIZZ-T2-004",
+        "OBS-JIZZ-T2-005",
+        "OBS-JIZZ-T2-006"
+      ],
+      "input_signal_ids": [
+        "SIG-JIZZ-FRAGMENTATION-001"
+      ],
+      "input_change_ids": [
+        "CHG-JIZZ-T1-T2-001"
+      ],
+      "methodology_id": "METH-JIZZ-DIVERSITY-001",
+      "algorithm_version": "jizz.analytics.v0.1",
+      "confidence": 0.84,
+      "coverage": 0.78,
+      "generated_at": "2026-02-16T00:00:00Z",
+      "provenance_id": "PROV-JIZZ-GOLDEN-001"
+    }
+  ],
+  "foreign_references": [],
+  "cross_repo_references": [],
+  "provenance": [
+    {
+      "schema_version": "jizz.provenance.v0.1",
+      "id": "PROV-JIZZ-GOLDEN-001",
+      "record_type": "PROVENANCE",
+      "domain": "PERSPECTIVE",
+      "source_ids": [
+        "SRC-JIZZ-MEDIA-001",
+        "SRC-JIZZ-CORPORATE-001",
+        "SRC-JIZZ-WORKERS-001",
+        "SRC-JIZZ-INVESTORS-001",
+        "SRC-JIZZ-ACADEMIA-001",
+        "SRC-JIZZ-CREATORS-001"
+      ],
+      "observation_ids": [
+        "OBS-JIZZ-T1-001",
+        "OBS-JIZZ-T1-002",
+        "OBS-JIZZ-T1-003",
+        "OBS-JIZZ-T2-001",
+        "OBS-JIZZ-T2-002",
+        "OBS-JIZZ-T2-003",
+        "OBS-JIZZ-T2-004",
+        "OBS-JIZZ-T2-005",
+        "OBS-JIZZ-T2-006"
+      ],
+      "research_run_id": "RRUN-JIZZ-GOLDEN-001",
+      "notes": "All records in this fixture are synthetic and exist only to exercise JIZZ semantics.",
+      "created_at": "2026-02-16T00:00:00Z"
+    }
+  ],
+  "research_runs": [
+    {
+      "schema_version": "jizz.research-run.v0.1",
+      "id": "RRUN-JIZZ-GOLDEN-001",
+      "record_type": "RESEARCH_RUN",
+      "domain": "PERSPECTIVE",
+      "started_at": "2026-02-16T00:00:00Z",
+      "completed_at": "2026-02-16T00:05:00Z",
+      "status": "COMPLETE",
+      "methodology_ids": [
+        "METH-JIZZ-DIVERSITY-001"
+      ],
+      "coverage": 0.78,
+      "notes": "Synthetic golden fixture run; no external source assertions."
+    }
+  ],
+  "methodologies": [
+    {
+      "schema_version": "jizz.methodology.v0.1",
+      "id": "METH-JIZZ-DIVERSITY-001",
+      "record_type": "METHODOLOGY",
+      "domain": "PERSPECTIVE",
+      "name": "Perspective field diversity and change",
+      "version": "0.1.0",
+      "formulae": {
+        "framing_diversity": "normalized Shannon entropy of active framing dimensions",
+        "disagreement": "normalized Shannon entropy of active non-UNKNOWN positions",
+        "divergence": "(framing_diversity + disagreement) / 2",
+        "convergence": "1 - divergence"
+      },
+      "normalization": "Metrics are normalized to 0..1 where applicable; raw counts are retained beside normalized metrics.",
+      "input_types": [
+        "OBSERVATION",
+        "PERSPECTIVE",
+        "FRAMING"
+      ],
+      "description": "Explainable snapshot/change method for the synthetic golden fixture.",
+      "created_at": "2026-02-16T00:00:00Z"
+    }
+  ]
+}

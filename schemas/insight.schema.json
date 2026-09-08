@@ -1,0 +1,26 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://rocksoul.dev/jizz/schemas/insight.schema.json",
+  "title":"JIZZ Insight",
+  "x-jizz-schema-version":"jizz.insight.v0.1",
+  "type":"object",
+  "required":["schema_version","id","record_type","domain","phenomenon_id","text","input_observation_ids","input_signal_ids","input_change_ids","methodology_id","algorithm_version","confidence","coverage","generated_at","provenance_id"],
+  "properties":{
+    "schema_version":{"const":"jizz.insight.v0.1"},
+    "id":{"type":"string","pattern":"^INS-JIZZ-[A-Z0-9-]+$"},
+    "record_type":{"const":"INSIGHT"},
+    "domain":{"const":"PERSPECTIVE"},
+    "phenomenon_id":{"type":"string"},
+    "text":{"type":"string","minLength":1},
+    "input_observation_ids":{"type":"array","items":{"type":"string"}},
+    "input_signal_ids":{"type":"array","items":{"type":"string"}},
+    "input_change_ids":{"type":"array","items":{"type":"string"}},
+    "methodology_id":{"type":"string"},
+    "algorithm_version":{"type":"string"},
+    "confidence":{"type":"number","minimum":0,"maximum":1},
+    "coverage":{"type":"number","minimum":0,"maximum":1},
+    "generated_at":{"type":"string","format":"date-time"},
+    "provenance_id":{"type":"string"}
+  },
+  "additionalProperties":false
+}
