@@ -1,0 +1,21 @@
+{
+  "schema_version": "jizz.research-index.v0.1",
+  "generated_from_latest_candidate_at": null,
+  "counts": {
+    "total": 0,
+    "active": 0,
+    "merged": 0,
+    "rejected": 0,
+    "by_status": {}
+  },
+  "lanes": [
+    {"id":"ai-workforce-discourse","candidate_type":"technology / labor perspective","zone_hint":"ECONOMIC","active_candidates":0},
+    {"id":"technology-regulation-discourse","candidate_type":"technology / regulation perspective","zone_hint":"TECHNICAL","active_candidates":0},
+    {"id":"cost-of-living-discourse","candidate_type":"economic public perspective","zone_hint":"ECONOMIC","active_candidates":0},
+    {"id":"climate-policy-discourse","candidate_type":"climate / policy perspective","zone_hint":"GLOBAL","active_candidates":0},
+    {"id":"science-health-discourse","candidate_type":"science / health perspective","zone_hint":"SCIENTIFIC","active_candidates":0},
+    {"id":"geopolitical-discourse","candidate_type":"geopolitical perspective","zone_hint":"POLITICAL","active_candidates":0},
+    {"id":"digital-culture-discourse","candidate_type":"digital / cultural perspective","zone_hint":"DIGITAL","active_candidates":0}
+  ],
+  "candidates": []
+}

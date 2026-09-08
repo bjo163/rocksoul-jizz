@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rocksoul.dev/jizz/schemas/research-topics.schema.json",
+  "title": "JIZZ Research Scout Topics",
+  "x-jizz-schema-version": "jizz.research-topics.v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version","provider","timespan","max_new_issues_per_run","topics"],
+  "properties": {
+    "schema_version": {"const": "jizz-research-topics.v0.1"},
+    "provider": {"const": "GDELT_DOC_2"},
+    "timespan": {"type": "string", "pattern": "^[0-9]+(min|h|d|w|m)$"},
+    "max_new_issues_per_run": {"type": "integer", "minimum": 1, "maximum": 20},
+    "topics": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id","candidate_type","zone_hint","queries"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "candidate_type": {"type": "string", "minLength": 1},
+          "zone_hint": {"enum": ["GLOBAL","REGIONAL","LOCAL","DIGITAL","CULTURAL","TECHNICAL","POLITICAL","ECONOMIC","SCIENTIFIC","COMMUNITY"]},
+          "queries": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 3}}
+        }
+      }
+    }
+  }
+}

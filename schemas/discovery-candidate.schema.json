@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rocksoul.dev/jizz/schemas/discovery-candidate.schema.json",
+  "title": "JIZZ Discovery Candidate",
+  "x-jizz-schema-version": "jizz.candidate.v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "candidate_id",
+    "domain",
+    "title",
+    "candidate_type",
+    "zone_hint",
+    "discovery",
+    "sources",
+    "duplicate_check",
+    "status",
+    "notes"
+  ],
+  "properties": {
+    "schema_version": {"const": "jizz.candidate.v0.1"},
+    "candidate_id": {"type": "string", "pattern": "^CAND-JIZZ-[A-Z0-9-]+$"},
+    "domain": {"const": "PERSPECTIVE"},
+    "title": {"type": "string", "minLength": 1},
+    "candidate_type": {"type": "string", "minLength": 1},
+    "zone_hint": {"enum": ["GLOBAL","REGIONAL","LOCAL","DIGITAL","CULTURAL","TECHNICAL","POLITICAL","ECONOMIC","SCIENTIFIC","COMMUNITY"]},
+    "discovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary","why_relevant","discovered_at","search_terms","lane_id"],
+      "properties": {
+        "summary": {"type": "string", "minLength": 1},
+        "why_relevant": {"type": "string", "minLength": 1},
+        "discovered_at": {"type": "string", "format": "date-time"},
+        "search_terms": {"type": "array", "items": {"type": "string"}},
+        "lane_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title","locator","source_type","authority","publisher","country","language","published_at"],
+        "properties": {
+          "title": {"type": "string", "minLength": 1},
+          "locator": {"type": "string", "format": "uri"},
+          "source_type": {"const": "news_metadata"},
+          "authority": {"const": "discovery_only"},
+          "publisher": {"type": ["string","null"]},
+          "country": {"type": ["string","null"]},
+          "language": {"type": ["string","null"]},
+          "published_at": {"type": ["string","null"], "format": "date-time"}
+        }
+      }
+    },
+    "duplicate_check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["checked","possible_matches"],
+      "properties": {
+        "checked": {"type": "boolean"},
+        "possible_matches": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "status": {"enum": ["discovered","needs_sources","ready_for_observation","rejected","merged"]},
+    "notes": {"type": ["string","null"]}
+  }
+}

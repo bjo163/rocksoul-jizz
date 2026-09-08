@@ -1,14 +1,22 @@
 {
   "name": "rocksoul-jizz",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "type": "module",
   "description": "ROCKSOUL multi-perspective intelligence: observe, juxtapose, detect zigzags, and explain change.",
   "scripts": {
     "validate": "node scripts/validate.mjs",
+    "index": "node scripts/build-index.mjs",
     "test": "node --test tests/*.test.mjs",
-    "ci": "npm run validate && npm test",
-    "start": "node src/server.mjs"
+    "ci": "npm run index && npm run validate && npm test",
+    "start": "node src/server.mjs",
+    "research:scout": "node scripts/research-scout.mjs",
+    "research:steward": "node scripts/research-steward.mjs",
+    "research:dry": "RESEARCH_SCOUT_DRY_RUN=1 node scripts/research-scout.mjs"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
   },
   "engines": {
     "node": ">=22"

@@ -1,0 +1,56 @@
+name: JIZZ Automatic Research
+
+on:
+  schedule:
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: jizz-automatic-research
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          package-manager-cache: false
+      - run: npm install --no-audit --no-fund
+
+      - name: Discover perspective leads
+        run: npm run research:scout
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          RESEARCH_SCOUT_MAX_NEW: "4"
+
+      - name: Triage discovered leads
+        run: npm run research:steward
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+      - name: Validate candidate corpus
+        run: npm run ci
+
+      - name: Commit staged candidates
+        shell: bash
+        run: |
+          git config user.name "JIZZ Steward"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/candidates data/indexes
+          if git diff --cached --quiet; then
+            echo "No candidate/index changes."
+          else
+            git commit -m "research: stage JIZZ perspective candidates"
+            git push origin HEAD:main
+          fi

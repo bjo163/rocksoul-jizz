@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://rocksoul.dev/jizz/schemas/research-index.schema.json",
+  "title": "JIZZ Research Index",
+  "x-jizz-schema-version": "jizz.research-index.v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version","generated_from_latest_candidate_at","counts","lanes","candidates"],
+  "properties": {
+    "schema_version": {"const": "jizz.research-index.v0.1"},
+    "generated_from_latest_candidate_at": {"type": ["string","null"], "format": "date-time"},
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total","active","merged","rejected","by_status"],
+      "properties": {
+        "total": {"type": "integer", "minimum": 0},
+        "active": {"type": "integer", "minimum": 0},
+        "merged": {"type": "integer", "minimum": 0},
+        "rejected": {"type": "integer", "minimum": 0},
+        "by_status": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}}
+      }
+    },
+    "lanes": {"type": "array", "items": {"type": "object"}},
+    "candidates": {"type": "array", "items": {"type": "object"}}
+  }
+}

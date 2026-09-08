@@ -1,0 +1,71 @@
+{
+  "schema_version": "jizz-research-topics.v0.1",
+  "provider": "GDELT_DOC_2",
+  "timespan": "7d",
+  "max_new_issues_per_run": 4,
+  "topics": [
+    {
+      "id": "ai-workforce-discourse",
+      "candidate_type": "technology / labor perspective",
+      "zone_hint": "ECONOMIC",
+      "queries": [
+        "artificial intelligence jobs workers layoffs",
+        "AI productivity workforce employment"
+      ]
+    },
+    {
+      "id": "technology-regulation-discourse",
+      "candidate_type": "technology / regulation perspective",
+      "zone_hint": "TECHNICAL",
+      "queries": [
+        "AI regulation technology companies government",
+        "technology regulation platform policy"
+      ]
+    },
+    {
+      "id": "cost-of-living-discourse",
+      "candidate_type": "economic public perspective",
+      "zone_hint": "ECONOMIC",
+      "queries": [
+        "cost of living inflation wages households",
+        "food prices housing wages public"
+      ]
+    },
+    {
+      "id": "climate-policy-discourse",
+      "candidate_type": "climate / policy perspective",
+      "zone_hint": "GLOBAL",
+      "queries": [
+        "climate policy industry communities transition",
+        "climate adaptation government business public"
+      ]
+    },
+    {
+      "id": "science-health-discourse",
+      "candidate_type": "science / health perspective",
+      "zone_hint": "SCIENTIFIC",
+      "queries": [
+        "public health policy scientists government communities",
+        "health research public debate policy"
+      ]
+    },
+    {
+      "id": "geopolitical-discourse",
+      "candidate_type": "geopolitical perspective",
+      "zone_hint": "POLITICAL",
+      "queries": [
+        "diplomacy conflict government public reaction",
+        "geopolitical tensions regional response"
+      ]
+    },
+    {
+      "id": "digital-culture-discourse",
+      "candidate_type": "digital / cultural perspective",
+      "zone_hint": "DIGITAL",
+      "queries": [
+        "online creators culture public reaction technology",
+        "digital culture platform creators controversy"
+      ]
+    }
+  ]
+}

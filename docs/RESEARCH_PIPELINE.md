@@ -1,61 +1,82 @@
 # Research Pipeline
 
-Target research flow:
+JIZZ uses the same simple staging principle as MFTL: discovery automation creates leads, not truth.
 
 ```text
-DISCOVER
+TOPICS
   ↓
-INGEST
+SCOUT
   ↓
-NORMALIZE
+GITHUB RESEARCH ISSUE
   ↓
-DE-DUPLICATE
+STEWARD
   ↓
-EXTRACT OBSERVATION
+CANDIDATE
   ↓
-RESOLVE PHENOMENON
+SOURCE INSPECTION
   ↓
-EXTRACT PERSPECTIVE
+SOURCE + OBSERVATION
   ↓
-EXTRACT FRAMING
+PHENOMENON
   ↓
-EXTRACT REACTION
+PERSPECTIVE + FRAMING + REACTION
   ↓
-DETECT SIGNAL
+SIGNAL + CHANGE
   ↓
-CALCULATE CHANGE
-  ↓
-GENERATE SNAPSHOT
-  ↓
-GENERATE INSIGHT
-  ↓
-PROVENANCE AUDIT
+SNAPSHOT + INSIGHT
   ↓
 INDEX
 ```
 
+## Automatic portion
+
+The scheduled loop stops here:
+
+```text
+DISCOVERED
+   ↓
+NEEDS_SOURCES
+```
+
+Scout and Steward may not promote discovery metadata into canonical observations.
+
+## Candidate lifecycle
+
+```text
+discovered
+    ↓
+needs_sources
+    ↓
+ready_for_observation
+    ↓
+merged
+
+or
+
+rejected
+```
+
+A merged candidate remains in history so the path from discovery to canonical perspective data stays auditable.
+
+## Canonical extraction
+
+Once a source is actually inspected:
+
+1. create/reuse SOURCE;
+2. extract source-scoped OBSERVATION;
+3. resolve/create PHENOMENON;
+4. create PERSPECTIVE only if the observed material supports an actor/context view;
+5. create FRAMING and REACTION only when support is explicit;
+6. preserve time, language, geography, provenance, and uncertainty;
+7. run analytics only after raw perspective records exist.
+
 Never:
 
 ```text
-RAW CONTENT → TRUTH
+ARTICLE METADATA → PERSPECTIVE TRUTH
+ARTICLE COUNT    → PUBLIC CONSENSUS
 ```
 
-## Stage rules
+## Index
 
-**Discover / ingest** preserve acquisition metadata and freshness.
-
-**Normalize / de-duplicate** remove transport duplication without merging identities based only on superficial similarity.
-
-**Observation extraction** records what was observed, not an asserted universal fact.
-
-**Phenomenon resolution** groups relevant observations while retaining uncertainty and external references.
-
-**Perspective / framing / reaction extraction** remains source- and actor-scoped.
-
-**Signal / change / snapshot / insight** are derived and must identify method + inputs.
-
-**Provenance audit** runs before an analysis record is accepted into a release-quality corpus.
-
-## Freshness
-
-Acquisition state may be `FRESH`, `AGING`, `STALE`, or `UNAVAILABLE`. Freshness says how current/retrievable the research source is; it does not say whether the source is correct.
+`scripts/build-index.mjs` generates `data/indexes/research-index.json` from candidates and configured research lanes. The index is derived and rebuildable.

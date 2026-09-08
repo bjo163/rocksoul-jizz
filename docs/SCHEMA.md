@@ -1,62 +1,56 @@
 # Schema Contract
 
-All JIZZ schemas use JSON Schema Draft 2020-12 and carry an explicit `x-jizz-schema-version`.
+All JIZZ machine contracts use JSON Schema Draft 2020-12 and explicit schema versions.
 
-## v0.1 record versions
-
-```text
-jizz.common.v0.1
-jizz.source.v0.1
-jizz.observation.v0.1
-jizz.phenomenon.v0.1
-jizz.perspective.v0.1
-jizz.framing.v0.1
-jizz.reaction.v0.1
-jizz.signal.v0.1
-jizz.change.v0.1
-jizz.snapshot.v0.1
-jizz.trend.v0.1
-jizz.pattern.v0.1
-jizz.insight.v0.1
-jizz.foreign-reference.v0.1
-jizz.cross-repo-reference.v0.1
-jizz.provenance.v0.1
-jizz.research-run.v0.1
-jizz.methodology.v0.1
-```
-
-Persisted records include `schema_version`. Incompatible changes require a new version and an explicit migration path; persisted records must never be silently reinterpreted.
-
-## Structural convention
-
-Where applicable records converge on:
+## Canonical and derived contracts
 
 ```text
-schema_version
-id
-record_type
-domain
-metadata
-provenance
-timestamps
-external references
-uncertainty / confidence
+SOURCE
+OBSERVATION
+PHENOMENON
+PERSPECTIVE
+FRAMING
+REACTION
+SIGNAL
+CHANGE
+PERSPECTIVE_SNAPSHOT
+TREND
+PATTERN
+INSIGHT
+FOREIGN_REFERENCE
+CROSS_REPO_REFERENCE
+PROVENANCE
+RESEARCH_RUN
+METHODOLOGY
 ```
 
-Semantic payloads remain domain-specific.
+## Research staging contracts
 
-## Validation layers
+```text
+DISCOVERY_CANDIDATE
+RESEARCH_TOPICS
+RESEARCH_INDEX
+```
 
-Local CI validates:
+`DISCOVERY_CANDIDATE` is intentionally outside canonical perspective data. Its source entries use `authority: discovery_only` until the underlying source is inspected.
 
-1. schema documents are parseable Draft 2020-12 contracts;
-2. required schema/doc files exist;
-3. record IDs are unique;
-4. local reference graphs are intact;
-5. temporal intervals are coherent;
-6. derived snapshots reconstruct from raw temporal records;
-7. provenance chains resolve locally;
-8. qualified namespaces are bounded;
-9. anti-overlap structures do not appear in implementation/data.
+## Version policy
 
-External repository availability is not required to compile or validate JIZZ locally.
+Persisted records carry a schema version. Incompatible semantic changes require a new version and explicit migration; historical records must not be silently reinterpreted.
+
+## Validation
+
+CI checks:
+
+1. schema files use Draft 2020-12;
+2. required docs/contracts exist;
+3. Scout topic configuration validates;
+4. every candidate validates;
+5. candidate IDs are unique;
+6. `needs_sources` candidates cannot contain promoted source authority;
+7. research index matches candidate count;
+8. local perspective graph references remain intact;
+9. historical snapshots remain reconstructable;
+10. anti-overlap rules remain intact.
+
+External ROCKSOUL repositories are not required for local compilation.

@@ -52,7 +52,50 @@ INSIGHT
 | RELATIONSHIP | rocksoul-correlation | How do canonical records relate? |
 | **PERSPECTIVE** | **rocksoul-jizz** | **How is the world seeing it?** |
 
-Product layers remain separate: DESIGN → rocksoul-assets, UI → rocksoul-ui, WEB → rocksoul-web, COMMUNITY → rocksoul-community, ADMIN → rocksoul-platform, CONSOLE → rocksoul-crayon.
+Product ownership stays separate: DESIGN → rocksoul-assets, UI → rocksoul-ui, WEB → rocksoul-web, COMMUNITY → rocksoul-community, ADMIN → rocksoul-platform, CONSOLE → rocksoul-crayon.
+
+## Automatic research
+
+JIZZ now uses the same simple research-staging pattern as MFTL:
+
+```text
+TOPICS
+  ↓
+GDELT SCOUT
+  ↓
+[AUTO-RESEARCH] ISSUE
+  ↓
+JIZZ STEWARD
+  ↓
+data/candidates/
+  ↓
+SOURCE INSPECTION
+  ↓
+SOURCE + OBSERVATION
+  ↓
+PHENOMENON + PERSPECTIVE
+```
+
+The automation runs daily at **09:17 Asia/Jakarta**. It may discover, score, de-duplicate, open issues, and stage `needs_sources` candidates. It **cannot automatically mint canonical perspective data**.
+
+Research configuration:
+
+```text
+data/research-scout/topics.json
+```
+
+Current lanes cover AI/workforce discourse, technology regulation, cost of living, climate policy, science/health, geopolitics, and digital culture.
+
+Manual commands:
+
+```bash
+npm run research:dry
+npm run research:scout
+npm run research:steward
+npm run index
+```
+
+See [Automatic Research](docs/AUTOMATIC_RESEARCH.md), [Automation](docs/AUTOMATION.md), and [Research Policy](docs/RESEARCH_POLICY.md).
 
 ## Canonical local ontology
 
@@ -82,7 +125,7 @@ RESEARCH_RUN
 METHODOLOGY
 ```
 
-JIZZ deliberately does not use CLAIM as its core abstraction. An observation may preserve a statement, mention, quote reference, reaction, or framing without promoting it into a canonical fact claim.
+JIZZ deliberately does not use CLAIM as its core abstraction. An observation preserves what was observed without promoting it into a universal fact claim.
 
 ## Brand ↔ function
 
@@ -90,8 +133,6 @@ JIZZ deliberately does not use CLAIM as its core abstraction. An observation may
 - **INTELLIGENCE** — transform observations into explainable, traceable analysis.
 - **ZIGZAG** — detect perspective, framing, reaction, attention, actor, and geographic shifts.
 - **ZONE** — preserve the context where a perspective exists.
-
-Operational phrase:
 
 ```text
 OBSERVE.
@@ -102,11 +143,11 @@ BUILD INTELLIGENCE.
 
 ## Quick start
 
-Requires Node.js 22+ and has no runtime dependencies.
+Requires Node.js 22+.
 
 ```bash
-npm run validate
-npm test
+npm install
+npm run ci
 npm run start
 ```
 
@@ -130,16 +171,7 @@ GET /phenomena/:id/foreign-references
 
 ## Golden example
 
-`data/golden/ai-workforce-reduction.json` is a synthetic, traceable fixture showing a phenomenon evolving from three active perspectives to six:
-
-- MEDIA → economic restructuring
-- CORPORATE → productivity optimization
-- WORKERS → job displacement
-- INVESTORS → margin improvement
-- ACADEMIA → labor transformation
-- CREATORS → AI takeover
-
-The analytics layer reconstructs two snapshots, detects increasing framing diversity and disagreement, emits a `FRAGMENTATION` signal, records a change, and derives the insight that the phenomenon is spreading faster than consensus is forming. The fixture is illustrative research data, not a claim about a real publisher, company, worker group, or event.
+`data/golden/ai-workforce-reduction.json` is a synthetic traceable fixture. It remains a test/teaching case; automatic research candidates live separately under `data/candidates/`.
 
 ## Guardrails
 
@@ -156,7 +188,7 @@ TREND ≠ HISTORICAL TRUTH
 CORRELATION ≠ JIZZ
 ```
 
-No truth score, winning perspective, world verdict, or universal correct view is defined.
+No truth score, winning perspective, world verdict, or universal correct view exists.
 
 ## Documentation
 
@@ -169,6 +201,9 @@ No truth score, winning perspective, world verdict, or universal correct view is
 - [Provenance](docs/PROVENANCE.md)
 - [Analytics](docs/ANALYTICS.md)
 - [Research pipeline](docs/RESEARCH_PIPELINE.md)
+- [Automatic research](docs/AUTOMATIC_RESEARCH.md)
+- [Automation](docs/AUTOMATION.md)
+- [Research policy](docs/RESEARCH_POLICY.md)
 - [API](docs/API.md)
 - [Testing](docs/TESTING.md)
 - [Vocabulary](docs/VOCABULARY.md)
