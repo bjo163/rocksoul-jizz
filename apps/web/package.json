@@ -1,0 +1,30 @@
+{
+  "name": "@rocksoul/jizz-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:data": "node scripts/generate-live-data.mjs",
+    "dev": "npm run generate:data && vite",
+    "build": "npm run generate:data && tsc --noEmit && vite build",
+    "typecheck": "npm run generate:data && tsc --noEmit",
+    "ci": "npm run build"
+  },
+  "dependencies": {
+    "@rocksoul/ui": "github:bjo163/rocksoul-ui#6a98ce0d5f5be60d4744f073837cd754639ea044",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "^5.8.3",
+    "vite": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=22",
+    "npm": ">=11.6.0"
+  },
+  "packageManager": "npm@11.6.0"
+}

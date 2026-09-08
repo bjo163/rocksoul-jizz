@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "framework": "vite",
+  "installCommand": "npx --yes npm@11.6.0 --prefix apps/web install --no-audit --no-fund",
+  "buildCommand": "npx --yes npm@11.6.0 --prefix apps/web run build",
+  "outputDirectory": "apps/web/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
