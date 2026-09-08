@@ -19,7 +19,8 @@ function walk(dir) {
 }
 
 function meta(body, key) {
-  return String(body).match(new RegExp(`${key}:([^\\n]+)`))?.[1]?.trim() ?? null;
+  const matches = [...String(body).matchAll(new RegExp(`${key}:([^\\n]+)`, "g"))];
+  return matches.at(-1)?.[1]?.trim() ?? null;
 }
 
 function valueLine(body, label) {
