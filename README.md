@@ -14,7 +14,7 @@
 
 > **JIZZ OWNS THE VIEW. NOT THE THING.**
 
-JIZZ is the ROCKSOUL multi-perspective intelligence observatory. It records how a phenomenon is being seen, framed, discussed, and reacted to; compares angles side-by-side; detects shifts over time; and produces explainable derived intelligence without claiming ownership of the underlying TEXT, STORY, EVENT, PERSON, LAW, or reviewed cross-domain RELATIONSHIP.
+JIZZ is the ROCKSOUL multi-perspective intelligence observatory. It records how a phenomenon is being seen, framed, discussed, and reacted to; compares angles side-by-side; detects shifts over time; and produces explainable derived intelligence without claiming ownership of the underlying TEXT, STORY, EVENT, PERSON, LAW, or reviewed cross-domain RELATIONSHIP. The repository now ships a live web observatory and a source-backed bootstrap corpus; synthetic golden fixtures remain isolated from live research.
 
 ## Core question
 
@@ -141,6 +141,38 @@ DETECT THE ZIGZAG.
 BUILD INTELLIGENCE.
 ```
 
+## Live observatory
+
+The repository includes a dependency-light frontend served by the same Node process as the semantic API.
+
+```text
+public/index.html
+public/styles.css
+public/app.js
+        ↓
+GET /phenomena
+GET /phenomena/:id/*
+        ↓
+data/live/*.json
+```
+
+The first live phenomenon is:
+
+```text
+PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026
+AI and the workforce transition in 2026
+```
+
+Its initial perspective field is curated from public 2026 sources from the Federal Reserve Banks of New York and Dallas, PwC, the International Labour Organization, and Indonesia's Badan Kepegawaian Negara. Each observation is source-scoped and retains uncertainty; the corpus is explicitly incomplete and is expected to grow through Steward research.
+
+Live data is validated separately with:
+
+```bash
+npm run validate:live
+```
+
+Synthetic fixtures under `data/golden/` are never used as the default live observatory corpus.
+
 ## Quick start
 
 Requires Node.js 22+.
@@ -157,7 +189,9 @@ Core endpoints:
 
 ```text
 GET /health
+GET /phenomena
 GET /phenomena/:id
+GET /phenomena/:id/sources
 GET /phenomena/:id/observations
 GET /phenomena/:id/perspectives
 GET /phenomena/:id/framings
@@ -171,7 +205,7 @@ GET /phenomena/:id/foreign-references
 
 ## Golden example
 
-`data/golden/ai-workforce-reduction.json` is a synthetic traceable fixture. It remains a test/teaching case; automatic research candidates live separately under `data/candidates/`.
+`data/golden/ai-workforce-reduction.json` is a synthetic traceable fixture. It remains a test/teaching case. Source-backed observatory records live under `data/live/`, while automatic research candidates remain separately staged under `data/candidates/`.
 
 ## Guardrails
 
