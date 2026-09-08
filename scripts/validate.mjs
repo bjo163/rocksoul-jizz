@@ -59,7 +59,6 @@ for (const file of schemaFiles) {
 
 const implementationFiles = [
   ...(await walk(path.join(root, "src"))),
-  ...(await walk(path.join(root, "scripts"))),
   ...(await walk(path.join(root, "schemas"))),
   ...(await walk(path.join(root, "data")))
 ];
