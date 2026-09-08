@@ -1,0 +1,663 @@
+{
+  "schema_version": "jizz.bundle.v0.1",
+  "domain": "PERSPECTIVE",
+  "corpus_kind": "LIVE_RESEARCH",
+  "phenomenon": {
+    "schema_version": "jizz.phenomenon.v0.1",
+    "id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+    "record_type": "PHENOMENON",
+    "domain": "PERSPECTIVE",
+    "title": "AI and the workforce transition in 2026",
+    "description": "How institutions are framing AI's effect on job demand, job transformation, skills, and worker adaptation during 2026.",
+    "zone": "GLOBAL",
+    "keywords": [
+      "artificial intelligence",
+      "jobs",
+      "workforce",
+      "automation",
+      "reskilling",
+      "labor market"
+    ],
+    "created_at": "2026-09-08T11:30:00Z",
+    "foreign_reference_ids": [],
+    "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+  },
+  "sources": [
+    {
+      "schema_version": "jizz.source.v0.1",
+      "id": "SRC-JIZZ-NYFED-20260901",
+      "record_type": "SOURCE",
+      "domain": "PERSPECTIVE",
+      "source_type": "ARTICLE",
+      "publisher": "Federal Reserve Bank of New York / Liberty Street Economics",
+      "author": "Jaison R. Abel, Richard Deitz, Natalia Emanuel, Nick Montalbano",
+      "organization": "Federal Reserve Bank of New York",
+      "url": "https://libertystreeteconomics.newyorkfed.org/2026/09/businesses-are-using-ai-to-transform-work-not-cut-jobs/",
+      "published_at": "2026-09-01T00:00:00Z",
+      "retrieved_at": "2026-09-08T11:30:00Z",
+      "language": "en",
+      "country": "US",
+      "region": "New York and Northern New Jersey",
+      "content_hash": "049d726c46908628f4770b12",
+      "freshness": "FRESH",
+      "metadata": {
+        "date_precision": "day",
+        "scope": "Regional business surveys; AI adoption and workforce responses"
+      },
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.source.v0.1",
+      "id": "SRC-JIZZ-DALLASFED-20260901",
+      "record_type": "SOURCE",
+      "domain": "PERSPECTIVE",
+      "source_type": "ARTICLE",
+      "publisher": "Federal Reserve Bank of Dallas",
+      "author": "Samuel Dodini and Tucker Smith",
+      "organization": "Federal Reserve Bank of Dallas",
+      "url": "https://www.dallasfed.org/research/economics/2026/0901",
+      "published_at": "2026-09-01T00:00:00Z",
+      "retrieved_at": "2026-09-08T11:30:00Z",
+      "language": "en",
+      "country": "US",
+      "region": "Texas",
+      "content_hash": "401acd4f1d146e475d6beaff",
+      "freshness": "FRESH",
+      "metadata": {
+        "date_precision": "day",
+        "scope": "Online job postings and occupation-level exposure to GenAI automation"
+      },
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.source.v0.1",
+      "id": "SRC-JIZZ-PWC-20260713",
+      "record_type": "SOURCE",
+      "domain": "PERSPECTIVE",
+      "source_type": "REPORT",
+      "publisher": "PwC Indonesia",
+      "author": null,
+      "organization": "PwC",
+      "url": "https://www.pwc.com/id/en/media-centre/press-release/2026/english/ai-jobs-barometer-en.html",
+      "published_at": "2026-07-13T00:00:00Z",
+      "retrieved_at": "2026-09-08T11:30:00Z",
+      "language": "en",
+      "country": "ID",
+      "region": "Global analysis published in Jakarta",
+      "content_hash": "7853f9e97730d72d33b9ae34",
+      "freshness": "FRESH",
+      "metadata": {
+        "date_precision": "day",
+        "scope": "AI Jobs Barometer 2026; more than one billion job ads across six continents"
+      },
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.source.v0.1",
+      "id": "SRC-JIZZ-ILO-20260317",
+      "record_type": "SOURCE",
+      "domain": "PERSPECTIVE",
+      "source_type": "REPORT",
+      "publisher": "International Labour Organization",
+      "author": "Paweł Gmyrek, Mariana Viollaz, Hernan Winkler",
+      "organization": "International Labour Organization",
+      "url": "https://www.ilo.org/publications/disruption-without-dividend-how-digital-divide-and-task-differences-split",
+      "published_at": "2026-03-17T00:00:00Z",
+      "retrieved_at": "2026-09-08T11:30:00Z",
+      "language": "en",
+      "country": null,
+      "region": "Global",
+      "content_hash": "e4479f716eb42b230ba6073a",
+      "freshness": "FRESH",
+      "metadata": {
+        "date_precision": "day",
+        "scope": "GenAI exposure, augmentation and automation across developing and advanced economies"
+      },
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.source.v0.1",
+      "id": "SRC-JIZZ-BKN-20260611",
+      "record_type": "SOURCE",
+      "domain": "PERSPECTIVE",
+      "source_type": "STATEMENT",
+      "publisher": "Badan Kepegawaian Negara Republik Indonesia",
+      "author": null,
+      "organization": "Badan Kepegawaian Negara Republik Indonesia",
+      "url": "https://www.bkn.go.id/prof-zudan-bkn-microsoft-indonesia-bekerja-sama-latih-145-ribu-asn-hadapi-era-ai/",
+      "published_at": "2026-06-11T00:00:00Z",
+      "retrieved_at": "2026-09-08T11:30:00Z",
+      "language": "id",
+      "country": "ID",
+      "region": "Indonesia",
+      "content_hash": "ebb203a6d9062c738a7d11d7",
+      "freshness": "FRESH",
+      "metadata": {
+        "date_precision": "day",
+        "scope": "Public-sector AI training and workforce adaptation for Indonesian civil servants"
+      },
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    }
+  ],
+  "observations": [
+    {
+      "schema_version": "jizz.observation.v0.1",
+      "id": "OBS-JIZZ-NYFED-20260901",
+      "record_type": "OBSERVATION",
+      "domain": "PERSPECTIVE",
+      "source_id": "SRC-JIZZ-NYFED-20260901",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "observed_at": "2026-09-08T11:30:00Z",
+      "published_at": "2026-09-01T00:00:00Z",
+      "observation_type": "FRAMING",
+      "actor_reference": "organization:new-york-fed-research",
+      "subject_reference": "topic:ai-workforce-transition",
+      "extracted_signal": "AI adoption is widespread in surveyed firms, but layoffs remain uncommon and retraining is the most common workforce response.",
+      "raw_reference": {
+        "locator": "https://libertystreeteconomics.newyorkfed.org/2026/09/businesses-are-using-ai-to-transform-work-not-cut-jobs/",
+        "note": "Curated from the article's survey findings and workforce-adjustment section."
+      },
+      "language": "en",
+      "geography": "US-NY",
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.observation.v0.1",
+      "id": "OBS-JIZZ-DALLASFED-20260901",
+      "record_type": "OBSERVATION",
+      "domain": "PERSPECTIVE",
+      "source_id": "SRC-JIZZ-DALLASFED-20260901",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "observed_at": "2026-09-08T11:30:00Z",
+      "published_at": "2026-09-01T00:00:00Z",
+      "observation_type": "FRAMING",
+      "actor_reference": "organization:dallas-fed-research",
+      "subject_reference": "topic:ai-workforce-transition",
+      "extracted_signal": "Job openings declined more in occupations whose tasks are more automatable by generative AI, indicating early labor-demand effects.",
+      "raw_reference": {
+        "locator": "https://www.dallasfed.org/research/economics/2026/0901",
+        "note": "Curated from the article's analysis of job postings and automation exposure."
+      },
+      "language": "en",
+      "geography": "US-TX",
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.observation.v0.1",
+      "id": "OBS-JIZZ-PWC-20260713",
+      "record_type": "OBSERVATION",
+      "domain": "PERSPECTIVE",
+      "source_id": "SRC-JIZZ-PWC-20260713",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "observed_at": "2026-09-08T11:30:00Z",
+      "published_at": "2026-07-13T00:00:00Z",
+      "observation_type": "FRAMING",
+      "actor_reference": "organization:pwc-global-ai",
+      "subject_reference": "topic:ai-workforce-transition",
+      "extracted_signal": "PwC describes a two-track labor market in which AI-skilled and expert-amplifying roles show stronger job and wage growth while entry-level requirements diverge.",
+      "raw_reference": {
+        "locator": "https://www.pwc.com/id/en/media-centre/press-release/2026/english/ai-jobs-barometer-en.html",
+        "note": "Curated from the 2026 AI Jobs Barometer press release."
+      },
+      "language": "en",
+      "geography": "GLOBAL",
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.observation.v0.1",
+      "id": "OBS-JIZZ-ILO-20260317",
+      "record_type": "OBSERVATION",
+      "domain": "PERSPECTIVE",
+      "source_id": "SRC-JIZZ-ILO-20260317",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "observed_at": "2026-09-08T11:30:00Z",
+      "published_at": "2026-03-17T00:00:00Z",
+      "observation_type": "FRAMING",
+      "actor_reference": "organization:ilo",
+      "subject_reference": "topic:ai-workforce-transition",
+      "extracted_signal": "The labor-market impact of GenAI is uneven across countries because connectivity, task composition, skills systems, labor institutions and social protection shape exposure and benefits.",
+      "raw_reference": {
+        "locator": "https://www.ilo.org/publications/disruption-without-dividend-how-digital-divide-and-task-differences-split",
+        "note": "Curated from the paper's distributional findings and policy implications."
+      },
+      "language": "en",
+      "geography": "GLOBAL",
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.observation.v0.1",
+      "id": "OBS-JIZZ-BKN-20260611",
+      "record_type": "OBSERVATION",
+      "domain": "PERSPECTIVE",
+      "source_id": "SRC-JIZZ-BKN-20260611",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "observed_at": "2026-09-08T11:30:00Z",
+      "published_at": "2026-06-11T00:00:00Z",
+      "observation_type": "REACTION",
+      "actor_reference": "organization:bkn-ri",
+      "subject_reference": "topic:ai-workforce-transition",
+      "extracted_signal": "BKN frames AI-driven changes in administrative work as a reason to reskill civil servants and targets AI training for up to 145,000 ASN.",
+      "raw_reference": {
+        "locator": "https://www.bkn.go.id/prof-zudan-bkn-microsoft-indonesia-bekerja-sama-latih-145-ribu-asn-hadapi-era-ai/",
+        "note": "Curated from BKN's press release on AI readiness and public-sector training."
+      },
+      "language": "id",
+      "geography": "ID",
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    }
+  ],
+  "perspectives": [
+    {
+      "schema_version": "jizz.perspective.v0.1",
+      "id": "PERSP-JIZZ-NYFED-20260901",
+      "record_type": "PERSPECTIVE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "actor_reference": "organization:new-york-fed-research",
+      "actor_type": "ACADEMIC",
+      "zone": "ECONOMIC",
+      "geography": "US-NY",
+      "audience_scope": "Businesses, researchers, policy observers",
+      "summary": "AI is so far reshaping work more than eliminating jobs; retraining is a more common response than layoffs.",
+      "framing_ids": [
+        "FRAME-JIZZ-NYFED-20260901"
+      ],
+      "position": "MIXED",
+      "salience": 0.86,
+      "observed_at": "2026-09-08T11:30:00Z",
+      "valid_from": "2026-09-01T00:00:00Z",
+      "valid_until": null,
+      "observation_refs": [
+        "OBS-JIZZ-NYFED-20260901"
+      ],
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.perspective.v0.1",
+      "id": "PERSP-JIZZ-DALLASFED-20260901",
+      "record_type": "PERSPECTIVE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "actor_reference": "organization:dallas-fed-research",
+      "actor_type": "ACADEMIC",
+      "zone": "ECONOMIC",
+      "geography": "US-TX",
+      "audience_scope": "Labor-market researchers, firms, students and policymakers",
+      "summary": "Early job-posting evidence suggests that occupations more exposed to GenAI automation are seeing weaker labor demand.",
+      "framing_ids": [
+        "FRAME-JIZZ-DALLASFED-20260901"
+      ],
+      "position": "QUESTIONING",
+      "salience": 0.9,
+      "observed_at": "2026-09-08T11:30:00Z",
+      "valid_from": "2026-09-01T00:00:00Z",
+      "valid_until": null,
+      "observation_refs": [
+        "OBS-JIZZ-DALLASFED-20260901"
+      ],
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.perspective.v0.1",
+      "id": "PERSP-JIZZ-PWC-20260713",
+      "record_type": "PERSPECTIVE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "actor_reference": "organization:pwc-global-ai",
+      "actor_type": "CORPORATE",
+      "zone": "ECONOMIC",
+      "geography": "GLOBAL",
+      "audience_scope": "Employers, executives, workers and labor-market observers",
+      "summary": "AI is creating differentiated labor-market paths, with stronger growth and wage premiums around AI skills and expert-amplifying roles.",
+      "framing_ids": [
+        "FRAME-JIZZ-PWC-20260713"
+      ],
+      "position": "SUPPORT",
+      "salience": 0.82,
+      "observed_at": "2026-09-08T11:30:00Z",
+      "valid_from": "2026-07-13T00:00:00Z",
+      "valid_until": null,
+      "observation_refs": [
+        "OBS-JIZZ-PWC-20260713"
+      ],
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.perspective.v0.1",
+      "id": "PERSP-JIZZ-ILO-20260317",
+      "record_type": "PERSPECTIVE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "actor_reference": "organization:ilo",
+      "actor_type": "GLOBAL",
+      "zone": "GLOBAL",
+      "geography": "GLOBAL",
+      "audience_scope": "Workers, governments, employers and development institutions",
+      "summary": "AI's labor effects are uneven: digital infrastructure, task composition and social protection influence whether augmentation gains or disruption arrive first.",
+      "framing_ids": [
+        "FRAME-JIZZ-ILO-20260317"
+      ],
+      "position": "QUESTIONING",
+      "salience": 0.91,
+      "observed_at": "2026-09-08T11:30:00Z",
+      "valid_from": "2026-03-17T00:00:00Z",
+      "valid_until": null,
+      "observation_refs": [
+        "OBS-JIZZ-ILO-20260317"
+      ],
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.perspective.v0.1",
+      "id": "PERSP-JIZZ-BKN-20260611",
+      "record_type": "PERSPECTIVE",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "actor_reference": "organization:bkn-ri",
+      "actor_type": "GOVERNMENT",
+      "zone": "TECHNICAL",
+      "geography": "ID",
+      "audience_scope": "Indonesian civil servants and public-sector leaders",
+      "summary": "Public-sector AI adoption should be met with large-scale skills development so routine automation becomes a transition toward more analytical and strategic work.",
+      "framing_ids": [
+        "FRAME-JIZZ-BKN-20260611"
+      ],
+      "position": "SUPPORT",
+      "salience": 0.88,
+      "observed_at": "2026-09-08T11:30:00Z",
+      "valid_from": "2026-06-11T00:00:00Z",
+      "valid_until": null,
+      "observation_refs": [
+        "OBS-JIZZ-BKN-20260611"
+      ],
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    }
+  ],
+  "framings": [
+    {
+      "schema_version": "jizz.framing.v0.1",
+      "id": "FRAME-JIZZ-NYFED-20260901",
+      "record_type": "FRAMING",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "perspective_id": "PERSP-JIZZ-NYFED-20260901",
+      "dimension": "SOCIAL",
+      "label": "work transformation through retraining rather than mass replacement",
+      "observed_at": "2026-09-08T11:30:00Z",
+      "valid_from": "2026-09-01T00:00:00Z",
+      "valid_until": null,
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.framing.v0.1",
+      "id": "FRAME-JIZZ-DALLASFED-20260901",
+      "record_type": "FRAMING",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "perspective_id": "PERSP-JIZZ-DALLASFED-20260901",
+      "dimension": "ECONOMIC",
+      "label": "automation exposure is beginning to reduce labor demand in some occupations",
+      "observed_at": "2026-09-08T11:30:00Z",
+      "valid_from": "2026-09-01T00:00:00Z",
+      "valid_until": null,
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.framing.v0.1",
+      "id": "FRAME-JIZZ-PWC-20260713",
+      "record_type": "FRAMING",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "perspective_id": "PERSP-JIZZ-PWC-20260713",
+      "dimension": "ECONOMIC",
+      "label": "a two-track labor market rewards AI skills and human expertise unevenly",
+      "observed_at": "2026-09-08T11:30:00Z",
+      "valid_from": "2026-07-13T00:00:00Z",
+      "valid_until": null,
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.framing.v0.1",
+      "id": "FRAME-JIZZ-ILO-20260317",
+      "record_type": "FRAMING",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "perspective_id": "PERSP-JIZZ-ILO-20260317",
+      "dimension": "SOCIAL",
+      "label": "distributional outcomes depend on infrastructure, tasks, institutions and worker protection",
+      "observed_at": "2026-09-08T11:30:00Z",
+      "valid_from": "2026-03-17T00:00:00Z",
+      "valid_until": null,
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.framing.v0.1",
+      "id": "FRAME-JIZZ-BKN-20260611",
+      "record_type": "FRAMING",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "perspective_id": "PERSP-JIZZ-BKN-20260611",
+      "dimension": "TECHNOLOGICAL",
+      "label": "reskilling and AI readiness as the response to automation of routine public-sector work",
+      "observed_at": "2026-09-08T11:30:00Z",
+      "valid_from": "2026-06-11T00:00:00Z",
+      "valid_until": null,
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    }
+  ],
+  "reactions": [
+    {
+      "schema_version": "jizz.reaction.v0.1",
+      "id": "REACT-JIZZ-NYFED-20260901",
+      "record_type": "REACTION",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "actor_reference": "organization:new-york-fed-research",
+      "reaction_type": "CORRECTION",
+      "sentiment": "NEUTRAL",
+      "observed_at": "2026-09-08T11:30:00Z",
+      "observation_refs": [
+        "OBS-JIZZ-NYFED-20260901"
+      ],
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.reaction.v0.1",
+      "id": "REACT-JIZZ-ILO-20260317",
+      "record_type": "REACTION",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "actor_reference": "organization:ilo",
+      "reaction_type": "WARNING",
+      "sentiment": "MIXED",
+      "observed_at": "2026-09-08T11:30:00Z",
+      "observation_refs": [
+        "OBS-JIZZ-ILO-20260317"
+      ],
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    },
+    {
+      "schema_version": "jizz.reaction.v0.1",
+      "id": "REACT-JIZZ-BKN-20260611",
+      "record_type": "REACTION",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "actor_reference": "organization:bkn-ri",
+      "reaction_type": "ADOPTION",
+      "sentiment": "POSITIVE",
+      "observed_at": "2026-09-08T11:30:00Z",
+      "observation_refs": [
+        "OBS-JIZZ-BKN-20260611"
+      ],
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    }
+  ],
+  "signals": [
+    {
+      "schema_version": "jizz.signal.v0.1",
+      "id": "SIG-JIZZ-DIVERGENCE-AI-WORKFORCE-2026",
+      "record_type": "SIGNAL",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "signal_type": "DIVERGENCE",
+      "inputs": [
+        "OBS-JIZZ-NYFED-20260901",
+        "OBS-JIZZ-DALLASFED-20260901",
+        "OBS-JIZZ-PWC-20260713",
+        "OBS-JIZZ-ILO-20260317",
+        "OBS-JIZZ-BKN-20260611"
+      ],
+      "methodology_id": "METH-JIZZ-CURATED-FIELD-001",
+      "algorithm_version": "jizz.analytics.v0.1",
+      "confidence": 0.82,
+      "timestamp": "2026-09-08T11:30:00Z",
+      "rationale": "The curated field contains simultaneously supportive, questioning, and mixed positions across economic, social, and technological framings.",
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    }
+  ],
+  "changes": [],
+  "perspective_snapshots": [
+    {
+      "schema_version": "jizz.snapshot.v0.1",
+      "id": "SNAP-JIZZ-AI-WORKFORCE-20260908",
+      "record_type": "PERSPECTIVE_SNAPSHOT",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "timestamp": "2026-09-08T11:30:00Z",
+      "observation_count": 5,
+      "source_count": 5,
+      "actor_count": 5,
+      "geography_count": 4,
+      "perspective_count": 5,
+      "framing_distribution": {
+        "SOCIAL": 2,
+        "ECONOMIC": 2,
+        "TECHNOLOGICAL": 1
+      },
+      "position_distribution": {
+        "MIXED": 1,
+        "QUESTIONING": 2,
+        "SUPPORT": 2
+      },
+      "metrics": {
+        "perspective_diversity": 1,
+        "framing_diversity": 0.96023,
+        "actor_diversity": 0.8,
+        "source_diversity": 1,
+        "geographic_spread": 0.8,
+        "disagreement": 0.96023,
+        "divergence": 0.96023,
+        "convergence": 0.03977
+      },
+      "uncertainty": 0.25,
+      "methodology_id": "METH-JIZZ-CURATED-FIELD-001",
+      "input_observation_ids": [
+        "OBS-JIZZ-NYFED-20260901",
+        "OBS-JIZZ-DALLASFED-20260901",
+        "OBS-JIZZ-PWC-20260713",
+        "OBS-JIZZ-ILO-20260317",
+        "OBS-JIZZ-BKN-20260611"
+      ],
+      "generated_at": "2026-09-08T11:30:00Z",
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    }
+  ],
+  "trends": [],
+  "patterns": [],
+  "insights": [
+    {
+      "schema_version": "jizz.insight.v0.1",
+      "id": "INS-JIZZ-AI-WORKFORCE-DISTRIBUTION-2026",
+      "record_type": "INSIGHT",
+      "domain": "PERSPECTIVE",
+      "phenomenon_id": "PHEN-JIZZ-AI-WORKFORCE-TRANSITION-2026",
+      "text": "The sources broadly agree that AI is changing work, but they diverge on whether the near-term story is mainly augmentation, weaker hiring in automatable occupations, skills polarization, or an uneven transition shaped by institutions and infrastructure.",
+      "input_observation_ids": [
+        "OBS-JIZZ-NYFED-20260901",
+        "OBS-JIZZ-DALLASFED-20260901",
+        "OBS-JIZZ-PWC-20260713",
+        "OBS-JIZZ-ILO-20260317",
+        "OBS-JIZZ-BKN-20260611"
+      ],
+      "input_signal_ids": [
+        "SIG-JIZZ-DIVERGENCE-AI-WORKFORCE-2026"
+      ],
+      "input_change_ids": [],
+      "methodology_id": "METH-JIZZ-CURATED-FIELD-001",
+      "algorithm_version": "jizz.research-synthesis.v0.1",
+      "confidence": 0.78,
+      "coverage": 0.64,
+      "generated_at": "2026-09-08T11:30:00Z",
+      "provenance_id": "PROV-JIZZ-AI-WORKFORCE-2026"
+    }
+  ],
+  "foreign_references": [],
+  "cross_repo_references": [],
+  "provenance": [
+    {
+      "schema_version": "jizz.provenance.v0.1",
+      "id": "PROV-JIZZ-AI-WORKFORCE-2026",
+      "record_type": "PROVENANCE",
+      "domain": "PERSPECTIVE",
+      "source_ids": [
+        "SRC-JIZZ-NYFED-20260901",
+        "SRC-JIZZ-DALLASFED-20260901",
+        "SRC-JIZZ-PWC-20260713",
+        "SRC-JIZZ-ILO-20260317",
+        "SRC-JIZZ-BKN-20260611"
+      ],
+      "observation_ids": [
+        "OBS-JIZZ-NYFED-20260901",
+        "OBS-JIZZ-DALLASFED-20260901",
+        "OBS-JIZZ-PWC-20260713",
+        "OBS-JIZZ-ILO-20260317",
+        "OBS-JIZZ-BKN-20260611"
+      ],
+      "research_run_id": "RRUN-JIZZ-AI-WORKFORCE-20260908",
+      "notes": "Human-curated bootstrap research from five publicly accessible 2026 sources. Extracted signals are source-scoped paraphrases, not claims of universal truth.",
+      "created_at": "2026-09-08T11:30:00Z"
+    }
+  ],
+  "research_runs": [
+    {
+      "schema_version": "jizz.research-run.v0.1",
+      "id": "RRUN-JIZZ-AI-WORKFORCE-20260908",
+      "record_type": "RESEARCH_RUN",
+      "domain": "PERSPECTIVE",
+      "started_at": "2026-09-08T11:00:00Z",
+      "completed_at": "2026-09-08T11:30:00Z",
+      "status": "COMPLETE",
+      "methodology_ids": [
+        "METH-JIZZ-CURATED-FIELD-001"
+      ],
+      "coverage": 0.64,
+      "notes": "Bootstrap live corpus assembled from New York Fed, Dallas Fed, PwC, ILO and BKN sources; coverage is intentionally incomplete and should expand with more worker, community, investor and employer voices."
+    }
+  ],
+  "methodologies": [
+    {
+      "schema_version": "jizz.methodology.v0.1",
+      "id": "METH-JIZZ-CURATED-FIELD-001",
+      "record_type": "METHODOLOGY",
+      "domain": "PERSPECTIVE",
+      "name": "Curated multi-source perspective field bootstrap",
+      "version": "0.1.0",
+      "formulae": {
+        "framing_diversity": "normalized Shannon entropy of active framing dimensions",
+        "disagreement": "normalized Shannon entropy of active non-UNKNOWN positions",
+        "divergence": "(framing_diversity + disagreement) / 2",
+        "convergence": "1 - divergence"
+      },
+      "normalization": "Snapshot diversity metrics use the repository's jizz.analytics.v0.1 formulas. Source synthesis remains qualitative and coverage-limited.",
+      "input_types": [
+        "SOURCE",
+        "OBSERVATION",
+        "PERSPECTIVE",
+        "FRAMING",
+        "REACTION"
+      ],
+      "description": "Source-scoped curation method for the first live JIZZ observatory corpus. It preserves disagreement and records coverage uncertainty instead of producing a winning perspective.",
+      "created_at": "2026-09-08T11:30:00Z"
+    }
+  ]
+}
