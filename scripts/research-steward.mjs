@@ -54,7 +54,7 @@ function existingTitles() {
 
 function evaluate(issue, knownTitles) {
   const body = String(issue.body ?? "");
-  const title = valueLine(body, "Title") ?? issue.title.replace(/^\[AUTO-RESEARCH\]\s*/, "");
+  const title = valueLine(body, "Title") ?? issue.title.replace(/^\[AUTO-RESEARCH\](?:\s+PERSPECTIVE\s+·)?\s*/, "");
   const locator = valueLine(body, "Locator");
   const lane = meta(body, "JIZZ-RESEARCH-LANE") ?? "unknown";
   const baseScore = Number(meta(body, "JIZZ-RESEARCH-SCORE") ?? 0);
@@ -109,6 +109,7 @@ async function patchIssue(issue, decision) {
     `- **Decision:** ${decision.action}`,
     `- **Reviewed at:** ${new Date().toISOString()}`,
     "",
+    `ROCKSOUL-RESEARCH-STATE:${decision.action}`,
     `JIZZ-RESEARCH-STATE:${decision.action}`
   ].join("\n");
 
@@ -137,7 +138,7 @@ let reviewed = 0;
 let staged = 0;
 
 for (const issue of issues.filter((item) => !item.pull_request && item.title.startsWith("[AUTO-RESEARCH]"))) {
-  const currentState = meta(issue.body, "JIZZ-RESEARCH-STATE");
+  const currentState = meta(issue.body, "ROCKSOUL-RESEARCH-STATE") ?? meta(issue.body, "JIZZ-RESEARCH-STATE");
   if (currentState && currentState !== "discovered") continue;
 
   const decision = evaluate(issue, knownTitles);
