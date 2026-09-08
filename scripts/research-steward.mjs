@@ -98,6 +98,7 @@ function makeCandidate(issue, decision) {
 
 async function patchIssue(issue, decision) {
   const marker = "## JIZZ Steward review";
+  const issueState = decision.action === "stage_candidate" ? "needs_sources" : decision.action === "hold" ? "triaged" : decision.action;
   let body = String(issue.body ?? "").split(marker)[0].trim();
   body += [
     "",
@@ -109,7 +110,7 @@ async function patchIssue(issue, decision) {
     `- **Decision:** ${decision.action}`,
     `- **Reviewed at:** ${new Date().toISOString()}`,
     "",
-    `ROCKSOUL-RESEARCH-STATE:${decision.action}`,
+    `ROCKSOUL-RESEARCH-STATE:${issueState}`,
     `JIZZ-RESEARCH-STATE:${decision.action}`
   ].join("\n");
 
@@ -121,7 +122,7 @@ async function patchIssue(issue, decision) {
       "content-type": "application/json",
       "x-github-api-version": "2022-11-28"
     },
-    body: JSON.stringify({ body })
+    body: JSON.stringify({ body, ...(decision.action === "duplicate" ? { state: "closed", state_reason: "not_planned" } : {}) })
   });
 }
 
