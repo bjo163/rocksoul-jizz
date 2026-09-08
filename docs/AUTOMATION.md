@@ -88,3 +88,37 @@ PERSPECTIVE change
 ```
 
 High-frequency observation does not imply high-frequency edge publication.
+
+
+## Ecosystem bootstrap mode
+
+JIZZ's hourly Steward is now part of the ecosystem-wide **BOOTSTRAP** topology defined canonically in `rocksoul-crayon/contracts/research-steward-topology.v1.json`.
+
+All five scheduled intelligence slots run hourly while the research corpus is still sparse:
+
+```text
+:00  Ecosystem Bootstrap   → CRAYON
+:10  Story-History         → MFTL / LEGEND isolated passes
+:20  Attestation           → RGBL / SUPERHERO isolated passes
+:30  LAW                   → AWS
+:40  PERSPECTIVE           → JIZZ
+```
+
+JIZZ receives the largest per-run discovery allowance because PERSPECTIVE is the highest-velocity domain. When queues are thin, the Steward may actively triage up to two strong non-duplicate perspective leads per run, preferring diversity across actor classes, geographies, languages, framings, reactions, and phenomena.
+
+The separate GDELT Scout remains a daily broad-discovery fallback. Hourly JIZZ does not require a full broad crawl every hour.
+
+Bootstrap does not weaken the canonical boundary:
+
+```text
+DISCOVERY
+→ issue / needs_sources candidate
+→ source inspection
+→ provenance-bearing extraction
+→ canonical JIZZ records
+
+NOT:
+internet → AI → truth
+```
+
+Correlation remains event-driven downstream.
