@@ -1,0 +1,14 @@
+{
+  "schema": "rocksoul.repository.v1",
+  "repository_id": "rocksoul-jizz",
+  "role": "PERSPECTIVE",
+  "provider": "github",
+  "github_repository": "rocksoul-jizz",
+  "tracking": {
+    "master_todo": "../MASTER-TODO.json"
+  },
+  "automation": {
+    "sync_enabled": true,
+    "release_mode": "repository-controlled"
+  }
+}
