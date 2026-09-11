@@ -1,6 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
-import { candidateId, clean, isDuplicateTitle, stewardDecision } from "../src/research.mjs";
+import {
+  candidateId,
+  clean,
+  countLifecycle,
+  isDuplicateTitle,
+  rankResearchIssues,
+  stewardDecision,
+  wipPressure
+} from "../src/research.mjs";
 
 const root = process.cwd();
 const repo = process.env.GITHUB_REPOSITORY;
@@ -9,6 +17,8 @@ if (!repo || !token) throw new Error("GITHUB_REPOSITORY and GITHUB_TOKEN are req
 
 const topicConfig = JSON.parse(fs.readFileSync(path.join(root, "data/research-scout/topics.json"), "utf8"));
 const topicById = new Map(topicConfig.topics.map((topic) => [topic.id, topic]));
+const runTimestamp = new Date().toISOString();
+const runId = `JIZZ-STEW-${runTimestamp.replace(/[^0-9]/g, "").slice(0, 14)}`;
 
 function walk(dir) {
   if (!fs.existsSync(dir)) return [];
@@ -32,7 +42,7 @@ async function jfetch(url, options = {}) {
     ...options,
     headers: {
       accept: "application/json",
-      "user-agent": "rocksoul-jizz-steward/0.2",
+      "user-agent": "rocksoul-jizz-steward/0.3",
       ...(options.headers ?? {})
     },
     signal: AbortSignal.timeout(20000)
@@ -52,6 +62,10 @@ function existingTitles() {
   return values;
 }
 
+function candidateCount() {
+  return walk(path.join(root, "data/candidates")).filter((item) => item.endsWith(".json")).length;
+}
+
 function evaluate(issue, knownTitles) {
   const body = String(issue.body ?? "");
   const title = valueLine(body, "Title") ?? issue.title.replace(/^\[AUTO-RESEARCH\](?:\s+PERSPECTIVE\s+·)?\s*/, "");
@@ -59,7 +73,8 @@ function evaluate(issue, knownTitles) {
   const lane = meta(body, "JIZZ-RESEARCH-LANE") ?? "unknown";
   const baseScore = Number(meta(body, "JIZZ-RESEARCH-SCORE") ?? 0);
   const duplicate = isDuplicateTitle(title, knownTitles);
-  return { title, locator, lane, duplicate, ...stewardDecision({ baseScore, hasLocator: Boolean(locator), duplicate }) };
+  const state = meta(body, "ROCKSOUL-RESEARCH-STATE") ?? meta(body, "JIZZ-RESEARCH-STATE") ?? "discovered";
+  return { title, locator, lane, duplicate, state, ...stewardDecision({ baseScore, hasLocator: Boolean(locator), duplicate }) };
 }
 
 function makeCandidate(issue, decision) {
@@ -96,22 +111,21 @@ function makeCandidate(issue, decision) {
   };
 }
 
-async function patchIssue(issue, decision) {
+async function patchIssue(issue, { state, decisionLabel, score, duplicate, close = false }) {
   const marker = "## JIZZ Steward review";
-  const issueState = decision.action === "stage_candidate" ? "needs_sources" : decision.action === "hold" ? "triaged" : decision.action;
   let body = String(issue.body ?? "").split(marker)[0].trim();
   body += [
     "",
     "",
     marker,
     "",
-    `- **Steward score:** ${decision.score}/100`,
-    `- **Duplicate:** ${decision.duplicate}`,
-    `- **Decision:** ${decision.action}`,
+    `- **Steward score:** ${score}/100`,
+    `- **Duplicate:** ${duplicate}`,
+    `- **Decision:** ${decisionLabel}`,
     `- **Reviewed at:** ${new Date().toISOString()}`,
     "",
-    `ROCKSOUL-RESEARCH-STATE:${issueState}`,
-    `JIZZ-RESEARCH-STATE:${decision.action}`
+    `ROCKSOUL-RESEARCH-STATE:${state}`,
+    `JIZZ-RESEARCH-STATE:${decisionLabel}`
   ].join("\n");
 
   const [owner, name] = repo.split("/");
@@ -122,8 +136,30 @@ async function patchIssue(issue, decision) {
       "content-type": "application/json",
       "x-github-api-version": "2022-11-28"
     },
-    body: JSON.stringify({ body, ...(decision.action === "duplicate" ? { state: "closed", state_reason: "not_planned" } : {}) })
+    body: JSON.stringify({ body, ...(close ? { state: "closed", state_reason: "not_planned" } : {}) })
   });
+}
+
+function researchSignal(issue, action, before, after, headline, nextGate, evidence = []) {
+  return {
+    run_id: runId,
+    timestamp: new Date().toISOString(),
+    slot: "perspective-bootstrap",
+    action,
+    domain: "PERSPECTIVE",
+    repository: "rocksoul-jizz",
+    headline,
+    why_it_matters: "Progress existing evidence-bearing PERSPECTIVE work before accumulating another discovery envelope.",
+    evidence_gain: action === "ADVANCED" || action === "STAGED" ? 10 : 0,
+    cross_domain_value: 0,
+    novelty: action === "STAGED" ? 5 : 0,
+    lifecycle_before: before,
+    lifecycle_after: after,
+    related_domains: [],
+    relationship_handoff: null,
+    next_gate: nextGate,
+    evidence: [`issue:#${issue.number}`, ...evidence]
+  };
 }
 
 const [owner, name] = repo.split("/");
@@ -134,16 +170,70 @@ const issues = await jfetch(`https://api.github.com/repos/${owner}/${name}/issue
   }
 });
 
+const researchIssues = issues.filter((item) => !item.pull_request && item.title.startsWith("[AUTO-RESEARCH]"));
 const knownTitles = existingTitles();
+const evaluated = researchIssues.map((issue) => ({ issue, decision: evaluate(issue, knownTitles) }));
+const counts = countLifecycle(evaluated.map(({ decision }) => decision.state));
+const pressure = wipPressure({ counts, candidateCount: candidateCount() });
+const ranked = rankResearchIssues(evaluated.map(({ issue, decision }) => ({
+  id: issue.number,
+  state: decision.state,
+  evidenceGain: decision.locator ? 10 : 0,
+  noveltyValue: decision.duplicate ? 0 : 8,
+  issue,
+  decision
+})), { pressure });
+
 let reviewed = 0;
 let staged = 0;
+let advanced = 0;
+const signals = [];
 
-for (const issue of issues.filter((item) => !item.pull_request && item.title.startsWith("[AUTO-RESEARCH]"))) {
-  const currentState = meta(issue.body, "ROCKSOUL-RESEARCH-STATE") ?? meta(issue.body, "JIZZ-RESEARCH-STATE");
-  if (currentState && currentState !== "discovered") continue;
+for (const item of ranked) {
+  const { issue, decision } = item;
+  const currentState = decision.state;
 
-  const decision = evaluate(issue, knownTitles);
-  await patchIssue(issue, decision);
+  if (currentState === "source_inspected" && decision.locator && !decision.duplicate) {
+    await patchIssue(issue, {
+      state: "ready_for_observation",
+      decisionLabel: "advance_ready_for_observation",
+      score: item.rps,
+      duplicate: false
+    });
+    reviewed += 1;
+    advanced += 1;
+    signals.push(researchSignal(issue, "ADVANCED", currentState, "ready_for_observation", decision.title, "SOURCE_SCOPED_OBSERVATION", [decision.locator]));
+    continue;
+  }
+
+  if (currentState !== "discovered") {
+    reviewed += 1;
+    const nextGate = currentState === "ready_for_observation"
+      ? "SOURCE_SCOPED_OBSERVATION"
+      : currentState === "needs_sources"
+        ? "SOURCE_INSPECTION"
+        : "EVIDENCE_GATE_REVIEW";
+    signals.push(researchSignal(issue, "BLOCKED", currentState, currentState, decision.title, nextGate, decision.locator ? [decision.locator] : []));
+    continue;
+  }
+
+  if (pressure.suppressDiscovery) {
+    signals.push(researchSignal(issue, "NO_UPDATE", currentState, currentState, decision.title, "PROGRESS_EXISTING_WIP", [
+      `actionable:${pressure.actionable}`,
+      `candidates:${pressure.candidateCount}`,
+      `candidate_lag:${pressure.candidateLag}`
+    ]));
+    continue;
+  }
+
+  const issueState = decision.action === "stage_candidate" ? "needs_sources" : decision.action === "hold" ? "triaged" : decision.action;
+  await patchIssue(issue, {
+    state: issueState,
+    decisionLabel: decision.action,
+    score: item.rps,
+    duplicate: decision.duplicate,
+    close: decision.action === "duplicate"
+  });
   reviewed += 1;
 
   if (decision.action === "stage_candidate") {
@@ -155,7 +245,11 @@ for (const issue of issues.filter((item) => !item.pull_request && item.title.sta
       knownTitles.push(candidate.title);
       staged += 1;
     }
+    signals.push(researchSignal(issue, "STAGED", currentState, "needs_sources", decision.title, "SOURCE_INSPECTION", decision.locator ? [decision.locator] : []));
+  } else {
+    signals.push(researchSignal(issue, decision.action === "duplicate" ? "NO_UPDATE" : "BLOCKED", currentState, issueState, decision.title, issueState === "triaged" ? "TRIAGE_REVIEW" : "SOURCE_INSPECTION", decision.locator ? [decision.locator] : []));
   }
 }
 
-console.log(`JIZZ steward: reviewed=${reviewed} staged=${staged}`);
+console.log(JSON.stringify({ schema_version: "rocksoul.research-signal-batch.v1", run_id: runId, signals }, null, 2));
+console.log(`JIZZ steward: reviewed=${reviewed} advanced=${advanced} staged=${staged} actionable=${pressure.actionable} discovery_suppressed=${pressure.suppressDiscovery}`);
