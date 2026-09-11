@@ -1,7 +1,7 @@
 {
   "schema_version":"jizz.research-index.v0.1",
   "generated_from_latest_candidate_at":"2026-09-11T01:00:28Z",
-  "counts":{"total":1,"active":1,"merged":0,"rejected":0,"by_status":{"canonicalized":1}},
+  "counts":{"total":1,"active":0,"merged":1,"rejected":0,"by_status":{"merged":1}},
   "lanes":[
     {"id":"ai-workforce-discourse","candidate_type":"technology / labor perspective","zone_hint":"ECONOMIC","active_candidates":0},
     {"id":"technology-regulation-discourse","candidate_type":"technology / regulation perspective","zone_hint":"TECHNICAL","active_candidates":0},
@@ -10,7 +10,7 @@
     {"id":"science-health-discourse","candidate_type":"science / health perspective","zone_hint":"SCIENTIFIC","active_candidates":0},
     {"id":"geopolitical-discourse","candidate_type":"geopolitical perspective","zone_hint":"POLITICAL","active_candidates":0},
     {"id":"digital-culture-discourse","candidate_type":"digital / cultural perspective","zone_hint":"DIGITAL","active_candidates":0},
-    {"id":"cultural-heritage-discourse","candidate_type":"cultural heritage / identity perspective","zone_hint":"CULTURAL","active_candidates":1}
+    {"id":"cultural-heritage-discourse","candidate_type":"cultural heritage / identity perspective","zone_hint":"CULTURAL","active_candidates":0}
   ],
-  "candidates":[{"id":"CAND-JIZZ-KALEVALA-HERITAGE-IDENTITY-FRAMING-AB2A63AF","title":"Kalevala heritage and identity framing","status":"canonicalized","lane_id":"cultural-heritage-discourse","zone_hint":"CULTURAL","source_count":3,"discovered_at":"2026-09-11T01:00:28Z"}]
+  "candidates":[{"id":"CAND-JIZZ-KALEVALA-HERITAGE-IDENTITY-FRAMING-AB2A63AF","title":"Kalevala heritage and identity framing","status":"merged","lane_id":"cultural-heritage-discourse","zone_hint":"CULTURAL","source_count":3,"discovered_at":"2026-09-11T01:00:28Z"}]
 }
