@@ -23,20 +23,20 @@
   },
   "inspection": {
     "explicit": true,
-    "recorded_at": "2026-09-11T20:40:21Z",
-    "scope": "Karjalan Sivistysseura Karelian-language/cultural framing was explicitly inspected before staging; SKS/Juminkeko and independent scholarship remain supporting issue-level context, not collapsed into this single source record.",
+    "recorded_at": "2026-09-11T21:42:00Z",
+    "scope": "Karjalan Sivistysseura Karelian-language/cultural framing was explicitly re-inspected before further progression. The publisher page resolves to the canonical /kalevala-vienankarjalaksi/ URL and explicitly dates the item 2015-02-25. SKS/Juminkeko and independent scholarship remain supporting issue-level context, not collapsed into this single source record.",
     "uncertainty": "This source supports an organization-scoped Karelian-language/cultural framing only. It does not establish universal Karelian ownership, reception, consensus, STORY truth, TEXT ownership, EVENT truth, PERSON ownership, or LAW conclusions."
   },
   "sources": [
     {
       "title": "Kal’evala vienankarjalakši",
-      "locator": "https://www.karjalansivistysseura.fi/verkkoaineistot/karjalan-kieli/kalevala-vienankarjalaksi/",
+      "locator": "https://www.karjalansivistysseura.fi/kalevala-vienankarjalaksi/",
       "source_type": "institutional_web",
       "authority": "source_inspected",
       "publisher": "Karjalan Sivistysseura",
       "country": "Finland",
       "language": "Finnish / White Sea Karelian",
-      "published_at": null
+      "published_at": "2015-02-25T00:00:00Z"
     }
   ],
   "duplicate_check": {
@@ -44,5 +44,5 @@
     "possible_matches": []
   },
   "status": "ready_for_observation",
-  "notes": "Staged from parent research issue #42 after explicit source inspection. This is not canonical SOURCE/OBSERVATION/PERSPECTIVE data. canonical_edge_created=false."
+  "notes": "Staged from parent research issue #42 after explicit source inspection. Source locator/date refreshed from the inspected publisher page. This is not canonical SOURCE/OBSERVATION/PERSPECTIVE data. canonical_edge_created=false."
 }
