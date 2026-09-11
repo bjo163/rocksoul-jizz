@@ -37,6 +37,28 @@
         "lane_id": {"type": "string", "minLength": 1}
       }
     },
+    "lineage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["research_issue_number","research_issue_url","research_fingerprint","origin"],
+      "properties": {
+        "research_issue_number": {"type": "integer", "minimum": 1},
+        "research_issue_url": {"type": "string", "format": "uri"},
+        "research_fingerprint": {"type": "string", "minLength": 1},
+        "origin": {"type": "string", "minLength": 1}
+      }
+    },
+    "inspection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["explicit","recorded_at","scope","uncertainty"],
+      "properties": {
+        "explicit": {"const": true},
+        "recorded_at": {"type": "string", "format": "date-time"},
+        "scope": {"type": "string", "minLength": 1},
+        "uncertainty": {"type": "string", "minLength": 1}
+      }
+    },
     "sources": {
       "type": "array",
       "minItems": 1,
@@ -47,8 +69,8 @@
         "properties": {
           "title": {"type": "string", "minLength": 1},
           "locator": {"type": "string", "format": "uri"},
-          "source_type": {"const": "news_metadata"},
-          "authority": {"const": "discovery_only"},
+          "source_type": {"enum": ["news_metadata","institutional_web","academic_publication","community_source","government_publication","legal_record","broadcast_archive","other"]},
+          "authority": {"enum": ["discovery_only","source_inspected"]},
           "publisher": {"type": ["string","null"]},
           "country": {"type": ["string","null"]},
           "language": {"type": ["string","null"]},
