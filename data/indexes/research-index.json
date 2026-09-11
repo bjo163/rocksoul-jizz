@@ -61,7 +61,7 @@
       "status": "ready_for_observation",
       "lane_id": "cultural-heritage-discourse",
       "zone_hint": "CULTURAL",
-      "source_count": 1,
+      "source_count": 3,
       "discovered_at": "2026-09-11T01:00:28Z"
     }
   ]
