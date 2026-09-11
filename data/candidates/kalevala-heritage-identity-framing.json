@@ -1,0 +1,48 @@
+{
+  "schema_version": "jizz.candidate.v0.1",
+  "candidate_id": "CAND-JIZZ-KALEVALA-HERITAGE-IDENTITY-FRAMING-AB2A63AF",
+  "domain": "PERSPECTIVE",
+  "title": "Kalevala heritage and identity framing",
+  "candidate_type": "cultural heritage / identity perspective",
+  "zone_hint": "CULTURAL",
+  "discovery": {
+    "summary": "Source-inspected PERSPECTIVE staging for how Kalevala heritage and identity are framed across Finnish and Karelian institutional and scholarly actors.",
+    "why_relevant": "Issue #42 has passed explicit source inspection and is ready for narrow source-scoped OBSERVATION/FRAMING work without treating any actor framing as truth or consensus.",
+    "discovered_at": "2026-09-11T01:00:28Z",
+    "search_terms": [
+      "Kalevala heritage identity framing",
+      "Karelian Kalevala Viena language"
+    ],
+    "lane_id": "cultural-heritage-discourse"
+  },
+  "lineage": {
+    "research_issue_number": 42,
+    "research_issue_url": "https://github.com/bjo163/rocksoul-jizz/issues/42",
+    "research_fingerprint": "ab2a63af2a83b073",
+    "origin": "jizz-steward"
+  },
+  "inspection": {
+    "explicit": true,
+    "recorded_at": "2026-09-11T20:40:21Z",
+    "scope": "Karjalan Sivistysseura Karelian-language/cultural framing was explicitly inspected before staging; SKS/Juminkeko and independent scholarship remain supporting issue-level context, not collapsed into this single source record.",
+    "uncertainty": "This source supports an organization-scoped Karelian-language/cultural framing only. It does not establish universal Karelian ownership, reception, consensus, STORY truth, TEXT ownership, EVENT truth, PERSON ownership, or LAW conclusions."
+  },
+  "sources": [
+    {
+      "title": "Kal’evala vienankarjalakši",
+      "locator": "https://www.karjalansivistysseura.fi/verkkoaineistot/karjalan-kieli/kalevala-vienankarjalaksi/",
+      "source_type": "institutional_web",
+      "authority": "source_inspected",
+      "publisher": "Karjalan Sivistysseura",
+      "country": "Finland",
+      "language": "Finnish / White Sea Karelian",
+      "published_at": null
+    }
+  ],
+  "duplicate_check": {
+    "checked": true,
+    "possible_matches": []
+  },
+  "status": "ready_for_observation",
+  "notes": "Staged from parent research issue #42 after explicit source inspection. This is not canonical SOURCE/OBSERVATION/PERSPECTIVE data. canonical_edge_created=false."
+}
