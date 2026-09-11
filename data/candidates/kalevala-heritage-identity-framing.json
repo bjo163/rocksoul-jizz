@@ -1,68 +1,19 @@
 {
-  "schema_version": "jizz.candidate.v0.1",
-  "candidate_id": "CAND-JIZZ-KALEVALA-HERITAGE-IDENTITY-FRAMING-AB2A63AF",
-  "domain": "PERSPECTIVE",
-  "title": "Kalevala heritage and identity framing",
-  "candidate_type": "cultural heritage / identity perspective",
-  "zone_hint": "CULTURAL",
-  "discovery": {
-    "summary": "Source-inspected PERSPECTIVE staging for how Kalevala heritage and identity are framed across Finnish and Karelian institutional and scholarly actors.",
-    "why_relevant": "Issue #42 has passed explicit source inspection and is ready for narrow source-scoped OBSERVATION/FRAMING work without treating any actor framing as truth or consensus.",
-    "discovered_at": "2026-09-11T01:00:28Z",
-    "search_terms": [
-      "Kalevala heritage identity framing",
-      "Karelian Kalevala Viena language"
-    ],
-    "lane_id": "cultural-heritage-discourse"
-  },
-  "lineage": {
-    "research_issue_number": 42,
-    "research_issue_url": "https://github.com/bjo163/rocksoul-jizz/issues/42",
-    "research_fingerprint": "ab2a63af2a83b073",
-    "origin": "jizz-steward"
-  },
-  "inspection": {
-    "explicit": true,
-    "recorded_at": "2026-09-11T22:38:31Z",
-    "scope": "Three materially distinct source layers are now explicitly represented in staging: Karjalan Sivistysseura Karelian-language/cultural framing, Juminkeko Karelian-culture institutional framing, and Joonas Ahola / Elore academic discourse analysis. Each remains source-scoped; the sources are not collapsed into consensus.",
-    "uncertainty": "These sources support organization- and scholarship-scoped framings only. They do not establish universal Karelian or Finnish ownership, reception, consensus, STORY truth, TEXT ownership, EVENT truth, PERSON ownership, or LAW conclusions. Juminkeko and Karjalan Sivistysseura are distinct institutions but both participate in Finnish/Karelian cultural infrastructure, so later synthesis must not overstate independence."
-  },
-  "sources": [
-    {
-      "title": "Kal’evala vienankarjalakši",
-      "locator": "https://www.karjalansivistysseura.fi/kalevala-vienankarjalaksi/",
-      "source_type": "institutional_web",
-      "authority": "source_inspected",
-      "publisher": "Karjalan Sivistysseura",
-      "country": "Finland",
-      "language": "Finnish / White Sea Karelian",
-      "published_at": "2015-02-25T00:00:00Z"
-    },
-    {
-      "title": "About Juminkeko",
-      "locator": "https://www.juminkeko.fi/en/activities/about-juminkeko/",
-      "source_type": "institutional_web",
-      "authority": "source_inspected",
-      "publisher": "Juminkeko",
-      "country": "Finland",
-      "language": "English",
-      "published_at": null
-    },
-    {
-      "title": "Kalevala – kansan luomistyön ihana perintö: Kalevalaan ja kansanperinteeseen liittyvät diskurssit neuvostokarjalaisessa suomenkielisessä lehdistössä 1928–1958",
-      "locator": "https://helsinki.academia.edu/JoonasAhola",
-      "source_type": "academic_publication",
-      "authority": "source_inspected",
-      "publisher": "Elore",
-      "country": "Finland",
-      "language": "Finnish / English abstract",
-      "published_at": null
-    }
+  "schema_version":"jizz.candidate.v0.1",
+  "candidate_id":"CAND-JIZZ-KALEVALA-HERITAGE-IDENTITY-FRAMING-AB2A63AF",
+  "domain":"PERSPECTIVE",
+  "title":"Kalevala heritage and identity framing",
+  "candidate_type":"cultural heritage / identity perspective",
+  "zone_hint":"CULTURAL",
+  "discovery":{"summary":"Source-inspected PERSPECTIVE work for Kalevala heritage and identity framing.","why_relevant":"Issue #42 reached canonicalization after source inspection.","discovered_at":"2026-09-11T01:00:28Z","search_terms":["Kalevala heritage identity framing"],"lane_id":"cultural-heritage-discourse"},
+  "lineage":{"research_issue_number":42,"research_issue_url":"https://github.com/bjo163/rocksoul-jizz/issues/42","research_fingerprint":"ab2a63af2a83b073","origin":"jizz-steward"},
+  "inspection":{"explicit":true,"recorded_at":"2026-09-11T23:42:13Z","scope":"Three inspected publisher-distinct sources were used for narrow canonical records.","uncertainty":"Publisher diversity is not consensus. Community coverage remains incomplete."},
+  "sources":[
+    {"title":"Kalevala in White Sea Karelian","locator":"https://www.karjalansivistysseura.fi/kalevala-vienankarjalaksi/","source_type":"institutional_web","authority":"source_inspected","publisher":"Karjalan Sivistysseura","country":"Finland","language":"Finnish / White Sea Karelian","published_at":"2015-02-25T00:00:00Z"},
+    {"title":"Kalevala Living Epic European Heritage Label","locator":"https://www.museovirasto.fi/en/articles/kalevala-elava-eepos-sai-euroopan-kulttuuriperintotunnuksen","source_type":"institutional_web","authority":"source_inspected","publisher":"Finnish Heritage Agency","country":"Finland","language":"English","published_at":"2024-04-11T00:00:00Z"},
+    {"title":"European Heritage Label for Kalevala","locator":"https://www.finlit.fi/en/latest-news/news/the-european-commission-has-awarded-the-kalevala-with-the-european-heritage-label/","source_type":"institutional_web","authority":"source_inspected","publisher":"Finnish Literature Society","country":"Finland","language":"English","published_at":"2024-04-11T00:00:00Z"}
   ],
-  "duplicate_check": {
-    "checked": true,
-    "possible_matches": []
-  },
-  "status": "ready_for_observation",
-  "notes": "Staged from parent research issue #42 after explicit source inspection. Source set expanded to three distinct actor/source layers after exact-head CI passed. This is not canonical SOURCE/OBSERVATION/PERSPECTIVE data. canonical_edge_created=false."
+  "duplicate_check":{"checked":true,"possible_matches":[]},
+  "status":"canonicalized",
+  "notes":"Canonical bundle is data/live/kalevala-heritage-identity-framing.json. Parent issue #42 retained. canonical_edge_created=false."
 }
