@@ -5,7 +5,7 @@
   "title":"Kalevala heritage and identity framing",
   "candidate_type":"cultural heritage / identity perspective",
   "zone_hint":"CULTURAL",
-  "discovery":{"summary":"Source-inspected PERSPECTIVE work for Kalevala heritage and identity framing.","why_relevant":"Issue #42 reached canonicalization after source inspection.","discovered_at":"2026-09-11T01:00:28Z","search_terms":["Kalevala heritage identity framing"],"lane_id":"cultural-heritage-discourse"},
+  "discovery":{"summary":"Source-inspected PERSPECTIVE work for Kalevala heritage and identity framing.","why_relevant":"Issue #42 completed source-scoped canonicalization.","discovered_at":"2026-09-11T01:00:28Z","search_terms":["Kalevala heritage identity framing"],"lane_id":"cultural-heritage-discourse"},
   "lineage":{"research_issue_number":42,"research_issue_url":"https://github.com/bjo163/rocksoul-jizz/issues/42","research_fingerprint":"ab2a63af2a83b073","origin":"jizz-steward"},
   "inspection":{"explicit":true,"recorded_at":"2026-09-11T23:42:13Z","scope":"Three inspected publisher-distinct sources were used for narrow canonical records.","uncertainty":"Publisher diversity is not consensus. Community coverage remains incomplete."},
   "sources":[
@@ -14,6 +14,6 @@
     {"title":"European Heritage Label for Kalevala","locator":"https://www.finlit.fi/en/latest-news/news/the-european-commission-has-awarded-the-kalevala-with-the-european-heritage-label/","source_type":"institutional_web","authority":"source_inspected","publisher":"Finnish Literature Society","country":"Finland","language":"English","published_at":"2024-04-11T00:00:00Z"}
   ],
   "duplicate_check":{"checked":true,"possible_matches":[]},
-  "status":"canonicalized",
-  "notes":"Canonical bundle is data/live/kalevala-heritage-identity-framing.json. Parent issue #42 retained. canonical_edge_created=false."
+  "status":"merged",
+  "notes":"Merged into data/live/kalevala-heritage-identity-framing.json with parent issue #42 retained. canonical_edge_created=false."
 }
