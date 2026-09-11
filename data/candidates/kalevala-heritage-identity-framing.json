@@ -23,9 +23,9 @@
   },
   "inspection": {
     "explicit": true,
-    "recorded_at": "2026-09-11T21:42:00Z",
-    "scope": "Karjalan Sivistysseura Karelian-language/cultural framing was explicitly re-inspected before further progression. The publisher page resolves to the canonical /kalevala-vienankarjalaksi/ URL and explicitly dates the item 2015-02-25. SKS/Juminkeko and independent scholarship remain supporting issue-level context, not collapsed into this single source record.",
-    "uncertainty": "This source supports an organization-scoped Karelian-language/cultural framing only. It does not establish universal Karelian ownership, reception, consensus, STORY truth, TEXT ownership, EVENT truth, PERSON ownership, or LAW conclusions."
+    "recorded_at": "2026-09-11T22:38:31Z",
+    "scope": "Three materially distinct source layers are now explicitly represented in staging: Karjalan Sivistysseura Karelian-language/cultural framing, Juminkeko Karelian-culture institutional framing, and Joonas Ahola / Elore academic discourse analysis. Each remains source-scoped; the sources are not collapsed into consensus.",
+    "uncertainty": "These sources support organization- and scholarship-scoped framings only. They do not establish universal Karelian or Finnish ownership, reception, consensus, STORY truth, TEXT ownership, EVENT truth, PERSON ownership, or LAW conclusions. Juminkeko and Karjalan Sivistysseura are distinct institutions but both participate in Finnish/Karelian cultural infrastructure, so later synthesis must not overstate independence."
   },
   "sources": [
     {
@@ -37,6 +37,26 @@
       "country": "Finland",
       "language": "Finnish / White Sea Karelian",
       "published_at": "2015-02-25T00:00:00Z"
+    },
+    {
+      "title": "About Juminkeko",
+      "locator": "https://www.juminkeko.fi/en/activities/about-juminkeko/",
+      "source_type": "institutional_web",
+      "authority": "source_inspected",
+      "publisher": "Juminkeko",
+      "country": "Finland",
+      "language": "English",
+      "published_at": null
+    },
+    {
+      "title": "Kalevala – kansan luomistyön ihana perintö: Kalevalaan ja kansanperinteeseen liittyvät diskurssit neuvostokarjalaisessa suomenkielisessä lehdistössä 1928–1958",
+      "locator": "https://helsinki.academia.edu/JoonasAhola",
+      "source_type": "academic_publication",
+      "authority": "source_inspected",
+      "publisher": "Elore",
+      "country": "Finland",
+      "language": "Finnish / English abstract",
+      "published_at": null
     }
   ],
   "duplicate_check": {
@@ -44,5 +64,5 @@
     "possible_matches": []
   },
   "status": "ready_for_observation",
-  "notes": "Staged from parent research issue #42 after explicit source inspection. Source locator/date refreshed from the inspected publisher page. This is not canonical SOURCE/OBSERVATION/PERSPECTIVE data. canonical_edge_created=false."
+  "notes": "Staged from parent research issue #42 after explicit source inspection. Source set expanded to three distinct actor/source layers after exact-head CI passed. This is not canonical SOURCE/OBSERVATION/PERSPECTIVE data. canonical_edge_created=false."
 }
