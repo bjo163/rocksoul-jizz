@@ -7,7 +7,7 @@
   "zone_hint": "CULTURAL",
   "discovery": {
     "summary": "Source-inspected PERSPECTIVE work for Te Tiriti framing across distinct Aotearoa actor classes.",
-    "why_relevant": "Issue #36 reached ready_for_observation after explicit source inspection and diversity review.",
+    "why_relevant": "Issue #36 reached canonicalized after explicit source inspection, diversity review, staging, and exact-head validation.",
     "discovered_at": "2026-09-10T12:40:54Z",
     "search_terms": ["Te Tiriti iwi framing", "Treaty of Waitangi perspective"],
     "lane_id": "cultural-heritage-discourse"
@@ -20,9 +20,9 @@
   },
   "inspection": {
     "explicit": true,
-    "recorded_at": "2026-09-12T02:37:00Z",
-    "scope": "Four provenance-distinct source layers were explicitly inspected before convergence: Ngati Toa Rangatira iwi-controlled programme framing, Ngai Tahu iwi leadership/public-history framing, Waitangi Tribunal institutional interpretation framing, and Public Service Commission Crown/public-service conduct framing.",
-    "uncertainty": "These source layers are actor-scoped and function-scoped. Two iwi do not establish Maori consensus; Tribunal interpretation does not establish a timeless national view; Public Service Commission conduct framing does not establish Crown consensus or legal effect. Legal holdings remain LAW-owned, exact Treaty wording remains TEXT-owned, and occurrence chronology remains EVENT-owned."
+    "recorded_at": "2026-09-12T04:42:00Z",
+    "scope": "Five provenance-distinct source layers were explicitly inspected before canonical extraction: Ngati Toa Rangatira iwi-controlled programme framing, Ngai Tahu iwi leadership/public-history framing, Waitangi Tribunal institutional interpretation framing, Public Service Commission Crown/public-service conduct framing, and Te Pati Maori party-scoped constitutional framing.",
+    "uncertainty": "These source layers are actor-scoped and function-scoped. Two iwi do not establish Maori consensus; Tribunal interpretation does not establish a timeless national view; Public Service Commission conduct framing does not establish Crown consensus or legal effect; Te Pati Maori is party-scoped. Legal holdings remain LAW-owned, exact Treaty wording remains TEXT-owned, and occurrence chronology remains EVENT-owned."
   },
   "sources": [
     {
@@ -64,12 +64,22 @@
       "country": "New Zealand",
       "language": "English",
       "published_at": "2026-02-04T00:00:00Z"
+    },
+    {
+      "title": "Te Pati Maori launches Te Tiriti Entrenchment Policy",
+      "locator": "https://www.maoriparty.org.nz/te_p_ti_m_ori_launches_te_tiriti_entrenchment_policy",
+      "source_type": "institutional_web",
+      "authority": "source_inspected",
+      "publisher": "Te Pati Maori",
+      "country": "New Zealand",
+      "language": "English / te reo Maori terminology",
+      "published_at": "2026-09-01T00:00:00Z"
     }
   ],
   "duplicate_check": {
     "checked": true,
     "possible_matches": []
   },
-  "status": "ready_for_observation",
-  "notes": "Converged source diversity only; no canonical SOURCE/OBSERVATION write yet. Stage narrow actor-scoped OBSERVATION/PERSPECTIVE/FRAMING records only after validation. Parent issue #36 retained. canonical_edge_created=false."
+  "status": "canonicalized",
+  "notes": "Canonicalization gate opened only after exact-head validate-jizz run #48 succeeded. Canonical extraction is restricted to dated, re-inspected source-scoped OBSERVATION/PERSPECTIVE/FRAMING records. Parent issue #36 retained. canonical_edge_created=false."
 }
