@@ -7,7 +7,7 @@
   "zone_hint": "CULTURAL",
   "discovery": {
     "summary": "Source-inspected PERSPECTIVE work for Te Tiriti framing across distinct Aotearoa actor classes.",
-    "why_relevant": "Issue #36 reached canonicalized after explicit source inspection, diversity review, staging, and exact-head validation.",
+    "why_relevant": "Issue #36 remains ready_for_observation after explicit source inspection, diversity review, staging, and exact-head validation.",
     "discovered_at": "2026-09-10T12:40:54Z",
     "search_terms": ["Te Tiriti iwi framing", "Treaty of Waitangi perspective"],
     "lane_id": "cultural-heritage-discourse"
@@ -21,7 +21,7 @@
   "inspection": {
     "explicit": true,
     "recorded_at": "2026-09-12T04:42:00Z",
-    "scope": "Five provenance-distinct source layers were explicitly inspected before canonical extraction: Ngati Toa Rangatira iwi-controlled programme framing, Ngai Tahu iwi leadership/public-history framing, Waitangi Tribunal institutional interpretation framing, Public Service Commission Crown/public-service conduct framing, and Te Pati Maori party-scoped constitutional framing.",
+    "scope": "Five provenance-distinct source layers were explicitly inspected before attempted canonical extraction: Ngati Toa Rangatira iwi-controlled programme framing, Ngai Tahu iwi leadership/public-history framing, Waitangi Tribunal institutional interpretation framing, Public Service Commission Crown/public-service conduct framing, and Te Pati Maori party-scoped constitutional framing.",
     "uncertainty": "These source layers are actor-scoped and function-scoped. Two iwi do not establish Maori consensus; Tribunal interpretation does not establish a timeless national view; Public Service Commission conduct framing does not establish Crown consensus or legal effect; Te Pati Maori is party-scoped. Legal holdings remain LAW-owned, exact Treaty wording remains TEXT-owned, and occurrence chronology remains EVENT-owned."
   },
   "sources": [
@@ -80,6 +80,6 @@
     "checked": true,
     "possible_matches": []
   },
-  "status": "canonicalized",
-  "notes": "Canonicalization gate opened only after exact-head validate-jizz run #48 succeeded. Canonical extraction is restricted to dated, re-inspected source-scoped OBSERVATION/PERSPECTIVE/FRAMING records. Parent issue #36 retained. canonical_edge_created=false."
+  "status": "ready_for_observation",
+  "notes": "Exact-head validate-jizz run #48 succeeded and sources were re-inspected. Canonical write was not created in this run because the repository write was blocked by the connector safety layer; lifecycle was therefore restored to ready_for_observation. Parent issue #36 retained. canonical_edge_created=false."
 }
