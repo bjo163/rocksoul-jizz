@@ -43,7 +43,7 @@
       "publisher": "Te Runanga o Ngai Tahu",
       "country": "New Zealand",
       "language": "English / te reo Maori terminology",
-      "published_at": "2025-02-06"
+      "published_at": "2025-02-06T00:00:00Z"
     },
     {
       "title": "The Tribunal and the treaty",
@@ -63,7 +63,7 @@
       "publisher": "Public Service Commission Te Kawa Mataaho",
       "country": "New Zealand",
       "language": "English",
-      "published_at": "2026-02-04"
+      "published_at": "2026-02-04T00:00:00Z"
     }
   ],
   "duplicate_check": {
