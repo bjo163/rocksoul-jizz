@@ -9,6 +9,7 @@ import { snapshotFor } from "../src/analytics.mjs";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const ajv = new Ajv2020({ allErrors: true, strict: false });
 addFormats(ajv);
+const validatorCache = new Map();
 
 const requiredDocs = [
   "DOMAIN.md", "DATA_MODEL.md", "SCHEMA.md", "BOUNDARIES.md", "ANTI_OVERLAP.md", "INTEROP.md",
@@ -54,9 +55,16 @@ function validateTemporal(record) {
   if (record.retrieved_at && record.published_at) invariant(new Date(record.retrieved_at) >= new Date(record.published_at), `retrieved before published: ${record.id}`);
 }
 
-function validateAgainstSchema(data, schemaName, label) {
+function validatorFor(schemaName) {
+  if (validatorCache.has(schemaName)) return validatorCache.get(schemaName);
   const schema = readJson(`schemas/${schemaName}`);
-  const validate = ajv.compile(schema);
+  const validate = (schema.$id && ajv.getSchema(schema.$id)) || ajv.compile(schema);
+  validatorCache.set(schemaName, validate);
+  return validate;
+}
+
+function validateAgainstSchema(data, schemaName, label) {
+  const validate = validatorFor(schemaName);
   if (!validate(data)) {
     throw new Error(`${label} failed ${schemaName}: ${JSON.stringify(validate.errors)}`);
   }
