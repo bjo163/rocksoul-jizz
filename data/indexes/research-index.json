@@ -1,6 +1,6 @@
 {
   "schema_version": "jizz.research-index.v0.1",
-  "generated_from_latest_candidate_at": "2026-09-11T01:00:28Z",
+  "generated_from_latest_candidate_at": "2026-09-12T02:37:00Z",
   "counts": {
     "total": 2,
     "active": 1,
@@ -71,7 +71,7 @@
       "status": "ready_for_observation",
       "lane_id": "cultural-heritage-discourse",
       "zone_hint": "CULTURAL",
-      "source_count": 1,
+      "source_count": 4,
       "discovered_at": "2026-09-10T12:40:54Z"
     }
   ]
