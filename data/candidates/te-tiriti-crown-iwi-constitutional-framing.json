@@ -1,15 +1,75 @@
 {
-  "schema_version":"jizz.candidate.v0.1",
-  "candidate_id":"CAND-JIZZ-TE-TIRITI-CROWN-IWI-CONSTITUTIONAL-FRAMING-83BA88D9",
-  "domain":"PERSPECTIVE",
-  "title":"Te Tiriti Crown iwi constitutional and public-history framing",
-  "candidate_type":"constitutional / Indigenous public-history perspective",
-  "zone_hint":"CULTURAL",
-  "discovery":{"summary":"Source-inspected PERSPECTIVE work for Te Tiriti framing across distinct Aotearoa actor classes.","why_relevant":"Issue #36 reached ready_for_observation after explicit source inspection and diversity review.","discovered_at":"2026-09-10T12:40:54Z","search_terms":["Te Tiriti iwi framing","Treaty of Waitangi perspective"],"lane_id":"cultural-heritage-discourse"},
-  "lineage":{"research_issue_number":36,"research_issue_url":"https://github.com/bjo163/rocksoul-jizz/issues/36","research_fingerprint":"83ba88d9c4c194b5","origin":"jizz-steward"},
-  "inspection":{"explicit":true,"recorded_at":"2026-09-12T00:38:50Z","scope":"Direct iwi-controlled source inspected before staging; additional actor classes remain documented at parent issue level.","uncertainty":"One iwi-controlled source is not Māori consensus. Legal effect remains LAW-owned; exact Treaty wording remains TEXT-owned; chronology remains EVENT-owned."},
-  "sources":[{"title":"Wānanga Tiriti o Waitangi","locator":"https://www.ngatitoa.iwi.nz/events/te-tiriti-o-waitangi-wnanga","source_type":"institutional_web","authority":"source_inspected","publisher":"Te Rūnanga o Toa Rangatira","country":"New Zealand","language":"English / te reo Māori terminology","published_at":null}],
-  "duplicate_check":{"checked":true,"possible_matches":[]},
-  "status":"ready_for_observation",
-  "notes":"Stage narrow source-scoped OBSERVATION/FRAMING only. Parent issue #36 retained. canonical_edge_created=false."
+  "schema_version": "jizz.candidate.v0.1",
+  "candidate_id": "CAND-JIZZ-TE-TIRITI-CROWN-IWI-CONSTITUTIONAL-FRAMING-83BA88D9",
+  "domain": "PERSPECTIVE",
+  "title": "Te Tiriti Crown iwi constitutional and public-history framing",
+  "candidate_type": "constitutional / Indigenous public-history perspective",
+  "zone_hint": "CULTURAL",
+  "discovery": {
+    "summary": "Source-inspected PERSPECTIVE work for Te Tiriti framing across distinct Aotearoa actor classes.",
+    "why_relevant": "Issue #36 reached ready_for_observation after explicit source inspection and diversity review.",
+    "discovered_at": "2026-09-10T12:40:54Z",
+    "search_terms": ["Te Tiriti iwi framing", "Treaty of Waitangi perspective"],
+    "lane_id": "cultural-heritage-discourse"
+  },
+  "lineage": {
+    "research_issue_number": 36,
+    "research_issue_url": "https://github.com/bjo163/rocksoul-jizz/issues/36",
+    "research_fingerprint": "83ba88d9c4c194b5",
+    "origin": "jizz-steward"
+  },
+  "inspection": {
+    "explicit": true,
+    "recorded_at": "2026-09-12T02:37:00Z",
+    "scope": "Four provenance-distinct source layers were explicitly inspected before convergence: Ngati Toa Rangatira iwi-controlled programme framing, Ngai Tahu iwi leadership/public-history framing, Waitangi Tribunal institutional interpretation framing, and Public Service Commission Crown/public-service conduct framing.",
+    "uncertainty": "These source layers are actor-scoped and function-scoped. Two iwi do not establish Maori consensus; Tribunal interpretation does not establish a timeless national view; Public Service Commission conduct framing does not establish Crown consensus or legal effect. Legal holdings remain LAW-owned, exact Treaty wording remains TEXT-owned, and occurrence chronology remains EVENT-owned."
+  },
+  "sources": [
+    {
+      "title": "Wananga Tiriti o Waitangi",
+      "locator": "https://www.ngatitoa.iwi.nz/events/te-tiriti-o-waitangi-wnanga",
+      "source_type": "institutional_web",
+      "authority": "source_inspected",
+      "publisher": "Te Runanga o Toa Rangatira",
+      "country": "New Zealand",
+      "language": "English / te reo Maori terminology",
+      "published_at": null
+    },
+    {
+      "title": "Ngai Tahu Kaiwhakahaere Justin Tipa Hui Whakau I Te Tiriti ki Onuku Waitangi Day 2025 Commemoration Speech",
+      "locator": "https://ngaitahu.iwi.nz/connect-2/connect/news-and-stories/ngai-tahu-kaiwhakahaere-justin-tipa-hui-whakau-i-te-tiriti-ki-onuku-waitangi-day-2025-commemoration-speech/",
+      "source_type": "institutional_web",
+      "authority": "source_inspected",
+      "publisher": "Te Runanga o Ngai Tahu",
+      "country": "New Zealand",
+      "language": "English / te reo Maori terminology",
+      "published_at": "2025-02-06"
+    },
+    {
+      "title": "The Tribunal and the treaty",
+      "locator": "https://www.waitangitribunal.govt.nz/en/about/the-treaty/about-the-tribunal-and-the-treaty",
+      "source_type": "institutional_web",
+      "authority": "source_inspected",
+      "publisher": "Waitangi Tribunal",
+      "country": "New Zealand",
+      "language": "English",
+      "published_at": null
+    },
+    {
+      "title": "The Code of Conduct for the Public Sector issued",
+      "locator": "https://www.publicservice.govt.nz/news/the-code-of-conduct-for-the-public-sector-issued",
+      "source_type": "institutional_web",
+      "authority": "source_inspected",
+      "publisher": "Public Service Commission Te Kawa Mataaho",
+      "country": "New Zealand",
+      "language": "English",
+      "published_at": "2026-02-04"
+    }
+  ],
+  "duplicate_check": {
+    "checked": true,
+    "possible_matches": []
+  },
+  "status": "ready_for_observation",
+  "notes": "Converged source diversity only; no canonical SOURCE/OBSERVATION write yet. Stage narrow actor-scoped OBSERVATION/PERSPECTIVE/FRAMING records only after validation. Parent issue #36 retained. canonical_edge_created=false."
 }
